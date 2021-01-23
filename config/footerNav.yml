@@ -1,0 +1,34 @@
+channels:
+  title: Social
+  items:
+    - title: GitHub
+      to: https://github.com/njunge94/
+      external: true
+    - title: LinkedIn
+      to: https://www.linkedin.com/in/nicholas-junge-957082192/
+      external: true
+    - title: Instagram
+      to: https://www.instagram.com/nicholasjunge/
+      external: true
+    - title: Mail
+      to: mailto:nicho.junge@gmail.com
+      external: true
+
+sections:
+  title: Sections
+  items:
+    - title: Blog
+      to: /posts
+      external: False
+    - title: Photography
+      to: /photo
+      external: False
+    - title: Mathematics 
+      to: /math
+      external: False
+    - title: Programming
+      to: /programming
+      external: False
+    - title: About me
+      to: /about
+      external: False

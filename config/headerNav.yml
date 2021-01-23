@@ -1,0 +1,16 @@
+items:
+  - title: Blog
+    to: /blog
+    activeSelector: /blog
+  - title: Photography
+    to: /photography
+    activeSelector: /photography
+  - title: Mathematics 
+    to: /math
+    activeSelector: /math
+  - title: Programming
+    to: /programming
+    activeSelector: /programming
+  - title: About me
+    to: /about
+    activeSelector: /about
