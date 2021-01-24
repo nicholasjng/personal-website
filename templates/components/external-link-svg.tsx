@@ -1,4 +1,5 @@
-const ExternalLinkSvg = ({ cssString }) => (
+
+const ExternalLinkSvg = () => (
   <svg
     x="0px"
     y="0px"
