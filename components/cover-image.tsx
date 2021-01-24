@@ -1,7 +1,15 @@
 import cn from "classnames";
 import Link from "next/link";
 import Image from "next/image";
-import PropTypes from "prop-types";
+
+type Props = {
+  title: string
+  src: string
+  slug?: string
+  height: number
+  width: number
+  section: string
+}
 
 export default function CoverImage({
   title,
@@ -10,7 +18,7 @@ export default function CoverImage({
   height,
   width,
   section,
-}) {
+}: Props) {
   const image = (
     <Image
       src={src}
@@ -35,12 +43,3 @@ export default function CoverImage({
     </div>
   );
 }
-
-CoverImage.propTypes = {
-  title: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-  height: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-  section: PropTypes.string.isRequired,
-};

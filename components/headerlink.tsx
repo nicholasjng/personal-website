@@ -1,7 +1,12 @@
 import Link from "next/link";
-import React from "react";
 
-const HeaderLink = ({ isActive, title, to }) => (
+type Props = {
+  isActive: boolean,
+  title: string,
+  to: string,
+}
+
+const HeaderLink = ({ isActive, title, to }: Props) => (
   <Link href={to}>
     <a
       href={to}

@@ -1,11 +1,17 @@
-import { Router, useRouter } from 'next/router';
-import PropTypes from 'prop-types';
-import Header from './header';
-import Footer from './footer';
-import Meta from './meta';
-import Container from './container';
+import { ReactNode } from "react";
+import { Router, useRouter } from "next/router";
+import PropTypes from "prop-types";
+import Header from "./header";
+import Footer from "./footer";
+import Meta from "./meta";
+import Container from "./container";
 
-export default function Layout({ preview, children }) {
+type Props = {
+  preview: boolean;
+  children: ReactNode;
+};
+
+export default function Layout({ preview, children }: Props) {
   const router = useRouter();
   const location = router.pathname;
   return (

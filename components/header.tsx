@@ -2,7 +2,17 @@ import Link from "next/link";
 import HeaderLink from "./headerlink";
 import navHeader from "../config/headerNav.yml";
 
-export default function Header({ location }) {
+type Props = {
+  location: string,
+}
+
+type LinkItem = {
+  title: string,
+  to: string,
+  activeSelector: string
+}
+
+export default function Header({ location }: Props) {
   return (
     <header className="sticky top-0 z-10 mb-5 bg-white border-b-2 border-black whitespace-nowrap py-4">
       <h1 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter inline-block ml-10">
@@ -13,7 +23,7 @@ export default function Header({ location }) {
         </Link>
       </h1>
       <nav className="inline-block absolute bottom-1 right-12">
-        {navHeader.items.map((link) => (
+        {navHeader.items.map((link: LinkItem) => (
           <HeaderLink
             key={link.title}
             isActive={location.includes(link.activeSelector)}

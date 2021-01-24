@@ -1,6 +1,9 @@
-import PropTypes from "prop-types";
+type Props = {
+  name: string
+  picture: string
+}
 
-export default function Avatar({ name, picture }) {
+export default function Avatar({ name, picture }: Props) {
   return (
     <div className="flex items-center">
       <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
@@ -8,8 +11,3 @@ export default function Avatar({ name, picture }) {
     </div>
   );
 }
-
-Avatar.propTypes = {
-  name: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
-};

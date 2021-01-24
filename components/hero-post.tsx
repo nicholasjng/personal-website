@@ -1,8 +1,18 @@
 import Link from "next/link";
-import PropTypes from "prop-types";
 import Avatar from "./avatar";
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
+import Author from "../types/author";
+
+type Props = {
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt: string;
+  author: Author;
+  slug: string;
+  section: string;
+};
 
 export default function HeroPost({
   title,
@@ -12,7 +22,7 @@ export default function HeroPost({
   author,
   slug,
   section,
-}) {
+}: Props) {
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -44,16 +54,3 @@ export default function HeroPost({
     </section>
   );
 }
-
-HeroPost.propTypes = {
-  title: PropTypes.string.isRequired,
-  coverImage: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  excerpt: PropTypes.string.isRequired,
-  author: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired,
-  }).isRequired,
-  slug: PropTypes.string.isRequired,
-  section: PropTypes.string.isRequired,
-};

@@ -1,8 +1,18 @@
 import Link from "next/link";
-import PropTypes from "prop-types";
 import Avatar from "./avatar";
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
+import Author from "../types/author";
+
+type Props = {
+  title: string,
+  coverImage: string,
+  date: string,
+  excerpt: string,
+  author: Author,
+  slug: string,
+  section: string,
+}
 
 export default function PostPreview({
   title,
@@ -12,7 +22,7 @@ export default function PostPreview({
   author,
   slug,
   section,
-}) {
+}: Props) {
   return (
     <div>
       <div className="mb-5">
@@ -38,26 +48,3 @@ export default function PostPreview({
     </div>
   );
 }
-
-PostPreview.propTypes = {
-  title: PropTypes.string,
-  coverImage: PropTypes.string,
-  date: PropTypes.string,
-  excerpt: PropTypes.string,
-  author: PropTypes.shape({
-    name: PropTypes.string,
-    picture: PropTypes.string,
-  }),
-  slug: PropTypes.string,
-  section: PropTypes.string,
-};
-
-PostPreview.defaultProps = {
-  title: "",
-  coverImage: "",
-  date: "",
-  excerpt: "",
-  author: {},
-  slug: "",
-  section: "blog",
-};
