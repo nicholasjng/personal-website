@@ -22,7 +22,7 @@ rules: {
   "@typescript-eslint/no-use-before-define": ["error"],
   # allow jsx syntax in js files (for next.js project)
   # should add ".ts" if typescript project
-  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], 
+  "react/jsx-filename-extension": [1, { "extensions": [".ts".tsx"] }], 
   "quotes": ["error", "double"],
   "react/jsx-one-expression-by-line": "off",
 }
