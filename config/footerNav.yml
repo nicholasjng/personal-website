@@ -18,10 +18,10 @@ sections:
   title: Sections
   items:
     - title: Blog
-      to: /posts
+      to: /blog
       external: False
     - title: Photography
-      to: /photo
+      to: /photography
       external: False
     - title: Mathematics 
       to: /math
