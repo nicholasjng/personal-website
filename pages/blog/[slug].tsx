@@ -8,13 +8,13 @@ import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
-import Post from "../../types/post";
+import PostType from "../../types/post";
 
 const section = "blog";
 
 type Props = {
-  post: Post,
-  morePosts: Post[],
+  post: PostType,
+  morePosts: PostType[],
   preview: boolean
 }
 
