@@ -6,6 +6,7 @@ import PostList from "../../components/post-list";
 import Placeholder from "../../components/placeholder";
 import { getAllPosts } from "../../lib/api";
 import Post from "../../types/post";
+import Intro from "../../components/intro";
 
 const MathIntro = () => (
   <p className="text-xl mb-20">
@@ -29,9 +30,7 @@ export default function BlogIndex({ allMathPosts }: Props) {
         <title>Mathematics & Physics Posts</title>
       </Head>
       <Container>
-        <h1 className="mb-16 text-6xl md:text-7xl font-bold">
-          Math & Physics.
-        </h1>
+        <Intro>Math & Physics.</Intro>
         <MathIntro />
         {allMathPosts.length === 0 && <Placeholder />}
         {heroPost && (

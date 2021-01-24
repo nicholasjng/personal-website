@@ -24,7 +24,7 @@ export default function Index({ allPosts }: Props) {
           </title>
         </Head>
         <Container>
-          <Intro />
+          <Intro>Latest.</Intro>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
