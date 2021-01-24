@@ -2,9 +2,9 @@ import ExternalFooterLink from "./external-footer-link";
 import FooterLink from "./footer-link";
 
 type LinkItem = {
-  external: boolean,
-  to: string,
-  title:string,
+  external: boolean
+  to: string
+  title:string
 }
 
 const SectionLinks = ({ links }) => links.map((item: LinkItem) => {

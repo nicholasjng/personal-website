@@ -7,8 +7,8 @@ import Meta from "./meta";
 import Container from "./container";
 
 type Props = {
-  preview: boolean;
-  children: ReactNode;
+  preview: boolean
+  children: ReactNode
 };
 
 export default function Layout({ preview, children }: Props) {

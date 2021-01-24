@@ -1,5 +1,5 @@
 type Props = {
-  children: string,
+  children: string
 }
 
 export default function PostTitle({ children }: Props) {

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 type Props = {
-  children: string,
-  target: string,
+  children: string
+  target: string
   to: string
 }
 

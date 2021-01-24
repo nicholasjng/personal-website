@@ -2,7 +2,7 @@ import DOMPurify from "isomorphic-dompurify";
 import markdownStyles from "./markdown-styles.module.css";
 
 type Props = {
-  content: string,
+  content: string
 }
 
 export default function PostBody({ content }: Props) {

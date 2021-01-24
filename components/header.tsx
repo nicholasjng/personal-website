@@ -3,12 +3,12 @@ import HeaderLink from "./headerlink";
 import navHeader from "../config/headerNav.yml";
 
 type Props = {
-  location: string,
+  location: string
 }
 
 type LinkItem = {
-  title: string,
-  to: string,
+  title: string
+  to: string
   activeSelector: string
 }
 

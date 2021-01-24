@@ -1,10 +1,10 @@
 import ExternalLinkSvg from "../templates/components/external-link-svg";
 
 type Props = {
-  children: string,
-  href: string,
-  target: string,
-  rel:string,
+  children: string
+  href: string
+  target: string
+  rel:string
 }
 
 const ExternalFooterLink = ({ children, href, target, rel }: Props) => (

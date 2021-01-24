@@ -1,8 +1,9 @@
 import Avatar from "./avatar";
-import Date from "./date-formatter";
 import CoverImage from "./cover-image";
+import DateFormatter from "./date-formatter";
 import PostTitle from "./post-title";
 import Author from "../types/author";
+
 
 type Props = {
   title: string
@@ -27,7 +28,7 @@ export default function PostHeader({ title, coverImage, date, section, author }:
           <Avatar name={author.name} picture={author.picture} />
         </div>
         <div className="mb-6 text-lg">
-          <Date dateString={date} />
+          <DateFormatter dateString={date} />
         </div>
       </div>
     </>

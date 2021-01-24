@@ -1,7 +1,7 @@
 import { ReactNode, FunctionComponent } from "react";
 
 type Props = {
-  children?: ReactNode;
+  children?: ReactNode
 };
 
 const Container: FunctionComponent = ({ children } : Props) => (

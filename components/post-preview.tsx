@@ -5,13 +5,13 @@ import CoverImage from "./cover-image";
 import Author from "../types/author";
 
 type Props = {
-  title: string,
-  coverImage: string,
-  date: string,
-  excerpt: string,
-  author: Author,
-  slug: string,
-  section: string,
+  title: string
+  coverImage: string
+  date: string
+  excerpt: string
+  author: Author
+  slug: string
+  section: string
 }
 
 export default function PostPreview({
