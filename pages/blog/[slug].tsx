@@ -13,8 +13,8 @@ import PostType from "../../types/post";
 const section = "blog";
 
 type Props = {
-  post: PostType,
-  morePosts: PostType[],
+  post: PostType
+  morePosts: PostType[]
   preview: boolean
 }
 

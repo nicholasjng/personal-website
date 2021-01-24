@@ -17,7 +17,7 @@ const MathIntro = () => (
 );
 
 type Props = {
-  allMathPosts: Post[],
+  allMathPosts: Post[]
 }
 
 export default function BlogIndex({ allMathPosts }: Props) {

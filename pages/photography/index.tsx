@@ -17,7 +17,7 @@ const BlogIntro = () => (
 );
 
 type Props = {
-  allPhotographyPosts: Post[],
+  allPhotographyPosts: Post[]
 }
 
 export default function BlogIndex({ allPhotographyPosts }: Props) {

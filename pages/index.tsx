@@ -8,7 +8,7 @@ import { getAllPosts } from "../lib/api";
 import Post from "../types/post";
 
 type Props = {
-  allPosts: Post[],
+  allPosts: Post[]
 }
 
 export default function Index({ allPosts }: Props) {
