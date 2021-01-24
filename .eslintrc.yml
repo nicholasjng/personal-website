@@ -26,3 +26,7 @@ rules: {
   "quotes": ["error", "double"],
   "react/jsx-one-expression-by-line": "off",
 }
+settings:
+  import/resolver:
+    node:
+      extensions: [".js", ".jsx", ".ts", ".tsx"]
