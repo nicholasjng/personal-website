@@ -5,28 +5,33 @@ import HeroPost from "../../components/hero-post";
 import PostList from "../../components/post-list";
 import Placeholder from "../../components/placeholder";
 import { getAllPosts } from "../../lib/api";
+import Post from "../../types/post";
 
 const BlogIntro = () => (
   <p className="text-xl mb-20">
-    All my programming / computer-related content pieces.
-    I am really into tech and software development, especially when it
-    has to do with math and physics as well!
+    All my photography content pieces. Content includes travel blogs /
+    diaries as well as photography reviews, mostly of Leica lenses and
+    cameras.
   </p>
 );
 
-export default function BlogIndex({ allProgrammingPosts }) {
-  const heroPost = allProgrammingPosts[0];
-  const morePosts = allProgrammingPosts.slice(1);
+type Props = {
+  allPhotographyPosts: Post[],
+}
+
+export default function BlogIndex({ allPhotographyPosts }: Props) {
+  const heroPost = allPhotographyPosts[0];
+  const morePosts = allPhotographyPosts.slice(1);
 
   return (
     <Layout>
       <Head>
-        <title>Tech and code content</title>
+        <title>Photography Blogs and Reviews</title>
       </Head>
       <Container>
-        <h1 className="mb-16 text-6xl md:text-7xl font-bold">Tech & code.</h1>
+        <h1 className="mb-16 text-6xl md:text-7xl font-bold">Photography.</h1>
         <BlogIntro />
-        {allProgrammingPosts.length === 0 && <Placeholder />}
+        {allPhotographyPosts.length === 0 && <Placeholder />}
         {heroPost && (
           <HeroPost
             title={heroPost.title}
@@ -45,8 +50,8 @@ export default function BlogIndex({ allProgrammingPosts }) {
 }
 
 export async function getStaticProps() {
-  const sectionType = "programming";
-  const allProgrammingPosts = getAllPosts(sectionType, [
+  const sectionType = "photography";
+  const allPhotographyPosts = getAllPosts(sectionType, [
     "title",
     "date",
     "slug",
@@ -57,6 +62,6 @@ export async function getStaticProps() {
   ]);
 
   return {
-    props: { allProgrammingPosts },
+    props: { allPhotographyPosts },
   };
 }

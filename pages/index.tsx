@@ -5,8 +5,13 @@ import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
+import Post from "../types/post";
 
-export default function Index({ allPosts }) {
+type Props = {
+  allPosts: Post[],
+}
+
+export default function Index({ allPosts }: Props) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
 

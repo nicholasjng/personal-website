@@ -5,30 +5,33 @@ import HeroPost from "../../components/hero-post";
 import PostList from "../../components/post-list";
 import Placeholder from "../../components/placeholder";
 import { getAllPosts } from "../../lib/api";
+import Post from "../../types/post";
 
 const BlogIntro = () => (
   <p className="text-xl mb-20">
-    All my blog posts and content pieces on different topics I feel passionate
-    about. These content pieces do not have any thematic common thread to them,
-    and thus might be a little unstructured. If you are interested in math
-    topics or photography posts instead, these have their own subcategories,
-    which you can find directly in the header menu.
+    All my programming / computer-related content pieces.
+    I am really into tech and software development, especially when it
+    has to do with math and physics as well!
   </p>
 );
 
-export default function BlogIndex({ allBlogPosts }) {
-  const heroPost = allBlogPosts[0];
-  const morePosts = allBlogPosts.slice(1);
+type Props = {
+  allProgrammingPosts: Post[]
+}
+
+export default function BlogIndex({ allProgrammingPosts }: Props) {
+  const heroPost = allProgrammingPosts[0];
+  const morePosts = allProgrammingPosts.slice(1);
 
   return (
     <Layout>
       <Head>
-        <title>Blog Posts and Thoughts</title>
+        <title>Tech and code content</title>
       </Head>
       <Container>
-        <h1 className="mb-16 text-6xl md:text-7xl font-bold">My Blog.</h1>
+        <h1 className="mb-16 text-6xl md:text-7xl font-bold">Tech & code.</h1>
         <BlogIntro />
-        {allBlogPosts.length === 0 && <Placeholder />}
+        {allProgrammingPosts.length === 0 && <Placeholder />}
         {heroPost && (
           <HeroPost
             title={heroPost.title}
@@ -36,8 +39,8 @@ export default function BlogIndex({ allBlogPosts }) {
             date={heroPost.date}
             author={heroPost.author}
             slug={heroPost.slug}
-            section={heroPost.section}
             excerpt={heroPost.excerpt}
+            section={heroPost.section}
           />
         )}
         {morePosts.length > 0 && <PostList posts={morePosts} />}
@@ -47,8 +50,8 @@ export default function BlogIndex({ allBlogPosts }) {
 }
 
 export async function getStaticProps() {
-  const sectionType = "blog";
-  const allBlogPosts = getAllPosts(sectionType, [
+  const sectionType = "programming";
+  const allProgrammingPosts = getAllPosts(sectionType, [
     "title",
     "date",
     "slug",
@@ -59,6 +62,6 @@ export async function getStaticProps() {
   ]);
 
   return {
-    props: { allBlogPosts },
+    props: { allProgrammingPosts },
   };
 }

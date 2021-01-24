@@ -8,8 +8,17 @@ import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
+import Post from "../../types/post";
 
-export default function Post({ post, morePosts, preview }) {
+const section = "blog";
+
+type Props = {
+  post: Post,
+  morePosts: Post[],
+  preview: boolean
+}
+
+export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -32,6 +41,7 @@ export default function Post({ post, morePosts, preview }) {
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
+              section={post.section}
               author={post.author}
             />
             <PostBody content={post.content} />
@@ -42,8 +52,15 @@ export default function Post({ post, morePosts, preview }) {
   );
 }
 
-export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
+type Params = {
+  params: {
+    slug: string,
+  }
+}
+
+export async function getStaticProps({ params }: Params) {
+
+  const post = getPostBySlug(params.slug, section, [
     "title",
     "date",
     "slug",
@@ -66,7 +83,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+  const posts = getAllPosts(section, ["slug"]);
 
   return {
     paths: posts.map((post) => ({

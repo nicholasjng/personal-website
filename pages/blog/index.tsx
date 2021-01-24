@@ -5,30 +5,35 @@ import HeroPost from "../../components/hero-post";
 import PostList from "../../components/post-list";
 import Placeholder from "../../components/placeholder";
 import { getAllPosts } from "../../lib/api";
+import Post from "../../types/post";
 
-const MathIntro = () => (
+const BlogIntro = () => (
   <p className="text-xl mb-20">
-    All posts on mathematics and physics topics. As I am very invested in those
-    fields, I decided to put them into their own category. Content can range
-    from beginner level (no / little knowledge required) to more advanced level.
+    All my blog posts and content pieces on different topics I feel passionate
+    about. These content pieces do not have any thematic common thread to them,
+    and thus might be a little unstructured. If you are interested in math
+    topics or photography posts instead, these have their own subcategories,
+    which you can find directly in the header menu.
   </p>
 );
 
-export default function BlogIndex({ allMathPosts }) {
-  const heroPost = allMathPosts[0];
-  const morePosts = allMathPosts.slice(1);
+type Props = {
+  allBlogPosts: Post[]
+}
+
+export default function BlogIndex({ allBlogPosts }: Props) {
+  const heroPost = allBlogPosts[0];
+  const morePosts = allBlogPosts.slice(1);
 
   return (
     <Layout>
       <Head>
-        <title>Mathematics & Physics Posts</title>
+        <title>Blog Posts and Thoughts</title>
       </Head>
       <Container>
-        <h1 className="mb-16 text-6xl md:text-7xl font-bold">
-          Math & Physics.
-        </h1>
-        <MathIntro />
-        {allMathPosts.length === 0 && <Placeholder />}
+        <h1 className="mb-16 text-6xl md:text-7xl font-bold">My Blog.</h1>
+        <BlogIntro />
+        {allBlogPosts.length === 0 && <Placeholder />}
         {heroPost && (
           <HeroPost
             title={heroPost.title}
@@ -47,8 +52,8 @@ export default function BlogIndex({ allMathPosts }) {
 }
 
 export async function getStaticProps() {
-  const sectionType = "math";
-  const allMathPosts = getAllPosts(sectionType, [
+  const sectionType = "blog";
+  const allBlogPosts = getAllPosts(sectionType, [
     "title",
     "date",
     "slug",
@@ -59,6 +64,6 @@ export async function getStaticProps() {
   ]);
 
   return {
-    props: { allMathPosts },
+    props: { allBlogPosts },
   };
 }
