@@ -2,15 +2,20 @@ items:
   - title: Blog
     to: /blog
     activeSelector: /blog
+    spanColor: 11
   - title: Photography
     to: /photography
     activeSelector: /photography
+    spanColor: 12
   - title: Mathematics 
     to: /math
     activeSelector: /math
+    spanColor: 13
   - title: Programming
     to: /programming
     activeSelector: /programming
+    spanColor: 14
   - title: About me
     to: /about
     activeSelector: /about
+    spanColor: 15
