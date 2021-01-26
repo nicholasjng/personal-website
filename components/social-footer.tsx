@@ -19,7 +19,7 @@ export default function SocialFooter() {
 
   return (
     <nav className="space-x-2">
-      <h3 className="text-2xl font-bold my-2">Share this page:</h3>
+      <h3 className="pl-2 text-2xl font-bold my-2">Share this page:</h3>
       <EmailShareButton url={location}>
         <EmailIcon size={32} round />
       </EmailShareButton>
