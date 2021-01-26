@@ -11,10 +11,7 @@ import Intro from "../../components/intro";
 const BlogIntro = () => (
   <p className="text-xl mb-20">
     All my blog posts and content pieces on different topics I feel passionate
-    about. These content pieces do not have any thematic common thread to them,
-    and thus might be a little unstructured. If you are interested in math
-    topics or photography posts instead, these have their own subcategories,
-    which you can find directly in the header menu.
+    about.
   </p>
 );
 
