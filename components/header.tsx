@@ -10,6 +10,7 @@ type LinkItem = {
   title: string
   to: string
   activeSelector: string
+  spanColor: number
 }
 
 export default function Header({ location }: Props) {
@@ -29,6 +30,7 @@ export default function Header({ location }: Props) {
             isActive={location.includes(link.activeSelector)}
             title={link.title}
             to={link.to}
+            spanColor={link.spanColor}
           />
         ))}
       </nav>

@@ -1,5 +1,4 @@
-import ExternalFooterLink from "./external-footer-link";
-import FooterLink from "./footer-link";
+import CustomLink from "./custom-link";
 
 type LinkItem = {
   external: boolean
@@ -7,25 +6,17 @@ type LinkItem = {
   title:string
 }
 
-const SectionLinks = ({ links }) => links.map((item: LinkItem) => {
-  if (item.external) {
-    return (
-      <ExternalFooterLink
+const SectionLinks = ({ links }) => links.map((item: LinkItem) => (
+  <CustomLink
         key={item.title}
         href={item.to}
-        target="_blank"
+        target={item.external ? "_blank" : "_self"}
         rel="noopener"
       >
         {item.title}
-      </ExternalFooterLink>
-    );
-  }
+  </CustomLink>
+  )
+);
 
-  return (
-    <FooterLink key={item.title} to={item.to}>
-      {item.title}
-    </FooterLink>
-  );
-});
 
 export default SectionLinks;

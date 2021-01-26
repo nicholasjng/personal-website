@@ -4,9 +4,10 @@ type Props = {
   isActive: boolean,
   title: string,
   to: string,
+  spanColor?: number
 }
 
-const HeaderLink = ({ isActive, title, to }: Props) => (
+const HeaderLink = ({ isActive, title, to, spanColor }: Props) => (
   <Link href={to}>
     <a
       href={to}
@@ -14,7 +15,7 @@ const HeaderLink = ({ isActive, title, to }: Props) => (
     >
       {title}
       {isActive && (
-        <span className="absolute -bottom-1.5 h-1 left-0 right-0 bg-green-300" />
+        <span className={`absolute -bottom-1.5 h-1 left-0 right-0 bg-nord-${spanColor}`} />
       )}
     </a>
   </Link>
