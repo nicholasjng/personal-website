@@ -11,7 +11,7 @@ const HeaderLink = ({ isActive, title, to, spanColor }: Props) => (
   <Link href={to}>
     <a
       href={to}
-      className="relative hover:text-green-300 flex-row items-center px-6 font-normal ease-out"
+      className={`relative hover:text-nord-${spanColor} flex-row items-center px-2 md:px-6 font-normal ease-out`}
     >
       {title}
       {isActive && (
