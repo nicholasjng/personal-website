@@ -18,7 +18,7 @@ export default function SocialFooter() {
   const location = router.asPath;
 
   return (
-    <nav className="space-x-2">
+    <nav className="space-x-2 sm:self-center md:self-start">
       <h3 className="pl-2 text-2xl font-bold my-2">Share this page:</h3>
       <EmailShareButton url={location}>
         <EmailIcon size={32} round />

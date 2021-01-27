@@ -8,7 +8,7 @@ import SectionLinks from "./section-links";
 export default function Footer() {
   return (
     <footer className="border-t bg-accent-1 border-accent-2 pt-16 pb-16">
-      <section className="container mx-auto px-10 lg:px-20 flex flex-row flex-wrap justify-between mb-16">
+      <section className="container mx-auto sm:w-full xl:w-2/3 px-10 lg:px-20 flex sm:flex-col md:flex-row flex-wrap justify-between mb-16">
         <SocialFooter />
         <FooterNav>
           <MetaTitle>{navFooter.sections.title}</MetaTitle>
