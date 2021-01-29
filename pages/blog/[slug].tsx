@@ -32,7 +32,7 @@ export default function Post({ post, morePosts, preview }: Props) {
           <article className=" mb-32">
             <Head>
               <title>
-                {post.title} | Personal Website made with Next.js
+                {post.title} | Nicholas Junge
               </title>
               <meta property="og:image" content={post.ogImage.url} />
             </Head>
