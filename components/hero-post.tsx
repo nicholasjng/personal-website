@@ -30,8 +30,8 @@ export default function HeroPost({
           title={title}
           src={coverImage}
           slug={slug}
-          height={620}
-          width={1240}
+          height={500}
+          width={1000}
           section={section}
         />
       </div>
