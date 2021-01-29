@@ -1,8 +1,8 @@
 ---
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+title: 'The journey begins'
+excerpt: 'Hopefully, the first of many posts!'
 coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+date: '2021-01-27T16:36:37.257Z'
 author:
   name: Nicholas Junge
   picture: '/assets/blog/authors/nicholas.jpeg'
@@ -10,10 +10,23 @@ ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+## And here we go!
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+I first thought about making my own website back in early 2020, but things did not fall into place. First, my thesis (naturally) took the bulk of my time, and in hindsight, simply put, I did not have anywhere near enough experience to successfully manage and execute this project.
 
-## Lorem Ipsum
+But since then, some time has passed, and I have made progress in a lot of areas. I finished my thesis and my degree, and started working with [an awesome group of guys](https://maiot.io/) in a Munich-based MLOps startup. Both of these really opened up some entirely new worlds for me!
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+## Retrospective
+
+Throughout 2020, I met and worked with many people who are passionate about their jobs, both in research and in tech. I would say that drawing inspiration from them and channeling it to accelerate my own personal growth was something that finally "made things click" for me.
+
+At this point, I want to thank the people that influenced me, motivated me and helped me get this project done. You are awesome, and no matter how it happened, in the end, you helped me a lot. I really, really appreciate it :-)
+
+## Outlook
+
+Looking forward, there are some exciting things to do! As you can see in the header, I created multiple themed sections, which I plan to fill with different stories and pieces over the course of the next few months.
+Especially the photography part is something I wanted to do for a long time.
+
+Furthermore, I decided to make the code for this website open source, so that it can serve as a starting point for someone who wants to make their own website as well, and is not shy about web development. 
+
+This concludes my first blog post. I'm really excited to see what this year has in store, and I hope you have a great 2021 in spite of the current pandemic situation. Catch you all in the next one!
