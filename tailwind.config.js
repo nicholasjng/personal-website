@@ -1,7 +1,15 @@
 const { nord_colors } = require("./nordcolors");
 
 module.exports = {
-  purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
+  purge: {
+    content: ['./components/**/*.tsx', './pages/**/*.tsx'],
+    options: {
+      safelist: {
+        deep: [/nord/]
+      }
+    }
+  },
+  
   theme: {
     extend: {
       colors: {
