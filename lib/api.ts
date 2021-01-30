@@ -1,12 +1,13 @@
 import fs from "fs";
-import { join } from "path";
+import { join, extname } from "path";
 import matter from "gray-matter";
 
 const CONTENT_ROOT = "content";
 
 export function getPostSlugs(sectionType: string) {
+  const md_ext = ".md"
   const postsDirectory = join(process.cwd(), CONTENT_ROOT, sectionType);
-  return fs.readdirSync(postsDirectory);
+  return fs.readdirSync(postsDirectory).filter((file) => (extname(file).toLowerCase() === md_ext));
 }
 
 export function getPostBySlug(slug: string, sectionType: string, fields: string[] = []) {
