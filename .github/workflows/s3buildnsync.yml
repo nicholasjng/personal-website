@@ -39,7 +39,7 @@ jobs:
           
       # Deploys output folder 
       - name: Deploy to S3 Bucket
-        run: aws s3 sync ./out s3://<<YOUR S3 BUCKET NAME HERE>>
+        run: aws s3 sync ./out s3://www.nicholasjunge.com
 
       - name: Invalidate Cloudfront CDN
         run: aws cloudfront create-invalidation --distribution-id=$CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
