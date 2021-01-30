@@ -2,7 +2,7 @@ import Head from "next/head";
 import Container from "../../components/container";
 import Intro from "../../components/intro";
 import Layout from "../../components/layout";
-import Image from "next/image";
+// import Image from "next/image";
 
 type Props = {
   preview: boolean;
@@ -21,7 +21,7 @@ export default function AboutIndex({ preview }: Props) {
             Nicholas Junge
           </h1>
           <div className="w-48 h-48 mx-auto">
-            <Image
+            <img
               src="/assets/about/me.jpg"
               alt="Image of me"
               width={250}
