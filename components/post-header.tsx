@@ -20,11 +20,11 @@ export default function PostHeader({ title, coverImage, date, section, author }:
       <div className="mb-8 md:mb-16 sm:mx-0">
         <CoverImage title={title} src={coverImage} height={620} width={1240} section={section}/>
       </div>
-      <div className="block max-w-2xl mx-auto">
-        <div className="mb-6 md:mb-12">
+      <div className="flex justify-between items-center max-w-2xl mx-auto">
+        <div className="flex">
           <Avatar name={author.name} picture={author.picture} />
         </div>
-        <div className="mb-6 text-lg">
+        <div className="flex text-lg">
           <DateFormatter dateString={date} />
         </div>
       </div>
