@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ExternalLinkSvg from "../templates/components/external-link-svg";
+import ExternalLinkSvg from "./external-link-svg";
 
 type LinkProps = {
   children: string
