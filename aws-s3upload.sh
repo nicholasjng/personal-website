@@ -9,11 +9,6 @@ aws s3 cp ./out/_next s3://$S3_BUCKET/$NAMESPACE/_next \
   --acl public-read --exclude "*.DS_Store" \
   --recursive --profile $AWS_PROFILE
 
-# aws s3 cp ./static/ s3://$S3_BUCKET/$NAMESPACE/static/ \
-#   --cache-control immutable,max-age=100000000,public \
-#   --acl public-read --exclude ".DS_Store" \
-#   --recursive --profile $AWS_PROFILE
-
 # copy the out/builds folder, and make the files never cached.
 # NOTE: there is a bug in AWS. If you copy a file that has been
 # uploaded as immutable using aws cp and try to modify its cache-control
