@@ -37,6 +37,9 @@ export default function Meta() {
         content={`A statically generated personal website using React JS and Next.js.`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE} />
+      <meta property="og:title" content={`My personal website | Nicholas Junge`} />
+      <meta property="og:description" 
+      content={`Blog posts, photo reviews, math and tech articles.`} />
     </Head>
   );
 }
