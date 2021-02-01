@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { HOME_OG_IMAGE_URL } from "../lib/constants";
+import { HOME_OG_IMAGE } from "../lib/constants";
 
 export default function Meta() {
   return (
@@ -36,7 +36,7 @@ export default function Meta() {
         name="description"
         content={`A statically generated personal website using React JS and Next.js.`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta property="og:image" content={HOME_OG_IMAGE} />
     </Head>
   );
 }
