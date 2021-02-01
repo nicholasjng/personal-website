@@ -1,6 +1,9 @@
 #!/bin/zsh
+
+# change this to your S3 bucket name
 S3_BUCKET=www.nicholasjunge.com
 NAMESPACE=production
+# change this to the name of your AWS IAM User Profile
 AWS_PROFILE=githubactionswebsite
 
 # copy _next and static folders, and make the files immutable

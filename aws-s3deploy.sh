@@ -1,5 +1,5 @@
 #!/bin/zsh
-GITHASH=`git rev-parse --short=12 HEAD`
+GITHASH=`git rev-parse --short HEAD`
 S3_BUCKET=www.nicholasjunge.com
 NAMESPACE=production
 AWS_PROFILE=githubactionswebsite

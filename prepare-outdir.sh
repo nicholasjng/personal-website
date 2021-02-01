@@ -1,11 +1,11 @@
-# get first 12 of the HEAD's git hash
-export GITHASH=`git rev-parse --short=12 HEAD`
+# get short version of the HEAD's git hash
+GITHASH=`git rev-parse --short HEAD`
+
+npm run build
 
 # at this point, we have an out directory as follows
 # out/[all html files]
 # out/_next/[all next files]
-# and we have a static directory as follows:
-# static/$ASSET_PATH/$ASSET_NAME.$ASSET_EXT/$ASSET_HASH.$ASSET_EXT
 
 # now, we move things around to work with the S3 config described above
 # the goal is to be able to have this new directory structure reflect what
