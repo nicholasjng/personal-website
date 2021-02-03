@@ -21,7 +21,7 @@ export default function Footer() {
       </section>
       <section className="flex flex-row justify-center">
         <p>{`Copyright © ${new Date().getFullYear()} Nicholas Junge.`}</p>
-        <a className="ml-2 underline text-success" href={GITHUB_REPO} target="_blank">
+        <a className="ml-2 underline text-success" href={GITHUB_REPO} target="_blank" rel="noopener">
           This website is open source!
         </a>
       </section>
