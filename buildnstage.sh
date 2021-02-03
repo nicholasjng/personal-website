@@ -1,3 +1,4 @@
+#!/bin/zsh
 # get short version of the HEAD's git hash
 GITHASH=`git rev-parse --short HEAD`
 

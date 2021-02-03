@@ -2,6 +2,7 @@
 
 # change this to your S3 bucket name
 S3_BUCKET=www.nicholasjunge.com
+# namespace, good if you have staging / testing builds too
 NAMESPACE=production
 # change this to the name of your AWS IAM User Profile
 AWS_PROFILE=githubactionswebsite
@@ -26,15 +27,17 @@ aws s3 cp ./out/builds s3://$S3_BUCKET/$NAMESPACE/builds \
 # builds/$GITHASH/about/index.html
 # But, s3 is stupid. When you request /about (without the terminal slash),
 # it will only look for /about (no extension). So, we need a separate step
-# to upload the html files redundantly. :)
+# to upload the html files redundantly.
 (cd out/builds &&
   find . -type f -name '*.html' | while read HTMLFILE; do
+    # split off ./ (first two chars)
     HTMLFILESHORT=${HTMLFILE:2}
-    HTMLFILE_WITHOUT_INDEX=${HTMLFILESHORT:r}
+    # split off extension
+    HTMLFILE_NOEXT=${HTMLFILESHORT:r}
 
-    # cp /about/index.html to /about
+    # cp all files to versions without extension
     aws s3 cp s3://$S3_BUCKET/$NAMESPACE/builds/${HTMLFILESHORT} \
-      s3://$S3_BUCKET/$NAMESPACE/builds/$HTMLFILE_WITHOUT_INDEX \
+      s3://$S3_BUCKET/$NAMESPACE/builds/$HTMLFILE_NOEXT \
       --profile $AWS_PROFILE
 
     if [ $? -ne 0 ]; then
