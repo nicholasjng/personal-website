@@ -11,7 +11,9 @@ files inside the S3 bucket. Furthermore, all the html files (your content) are u
 website routing using next.js, which fails to resolve routes with a ".html" extension upon page refresh. 
 4. Run `aws-s3deploy.sh`. This syncs the uploaded S3 folder to another S3 folder called `current`, which contains the current deployment. To roll back changes to an earlier commit, you can set the `GITHASH` variable in the script to an earlier deployment's hash still present in the S3 bucket.
 
-More information can be found in this Gist: https://gist.github.com/rbalicki2/30e8ee5fb5bc2018923a06c5ea5e3ea5
+You can (and should) reset the `AWS_PROFILE` and `S3_BUCKET` variables to match your own scenario. Simply edit the script files for that :-)
+
+More information can be found in this excellent Gist: https://gist.github.com/rbalicki2/30e8ee5fb5bc2018923a06c5ea5e3ea5
 
 ## Required permissions for versioned deployments on the command line
 
