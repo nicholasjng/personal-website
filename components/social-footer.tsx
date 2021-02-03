@@ -21,7 +21,7 @@ export default function SocialFooter() {
   const url = BASE_URL + (location === "/" ? "" : location)
 
   return (
-    <nav className="space-x-2 sm:self-center md:self-start">
+    <nav className="mx-auto md:mx-0 space-x-2 self-center lg:self-start">
       <h3 className="pl-2 text-2xl font-bold my-2">Share this page:</h3>
       <EmailShareButton url={url}>
         <EmailIcon size={32} round />
