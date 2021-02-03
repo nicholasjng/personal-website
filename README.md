@@ -13,5 +13,29 @@ website routing using next.js, which fails to resolve routes with a ".html" exte
 
 More information can be found in this Gist: https://gist.github.com/rbalicki2/30e8ee5fb5bc2018923a06c5ea5e3ea5
 
+## Required permissions for versioned deployments on the command line
 
- 
+To deploy the website on the command line, you need 3 things:
+
+ 1. An AWS account.
+ 2. An AWS S3 bucket.
+ 3. An IAM user with the following minimum permissions:
+ ```
+  "Action": [
+      "s3:PutObject",
+      "s3:GetObject",
+      "s3:ListBucket",
+      "s3:DeleteObject",
+      "s3:PutObjectAcl"
+  ],
+  "Resource": [
+      "arn:aws:s3:::<YOUR_S3_BUCKET_NAME>/*",
+      "arn:aws:s3:::<YOUR_S3_BUCKET_NAME>"
+  ]
+  ```
+
+## Additional info
+
+To configure your site with HTTPS, you have to resort to a CloudFront distribution, since S3 static website endpoints are http-only. Creating a CloudFront distribution is easy, you can even request a custom HTTPS cert for your domain from ACM during the creation process.
+
+Also, it is recommended to adhere to AWS IAM best practices by using an IAM user profile with the minimum necessary permissions to perform bucket updates. You can create these users directly in the IAM console, export the credentials to a CSV file and read them in with the `aws configure import` command of the AWS CLI (NB: this requires v2 of the CLI).
