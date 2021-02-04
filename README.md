@@ -41,3 +41,10 @@ To deploy the website on the command line, you need 3 things:
 To configure your site with HTTPS, you have to resort to a CloudFront distribution, since S3 static website endpoints are http-only. Creating a CloudFront distribution is easy, you can even request a custom HTTPS cert for your domain from ACM during the creation process.
 
 Also, it is recommended to adhere to AWS IAM best practices by using an IAM user profile with the minimum necessary permissions to perform bucket updates. You can create these users directly in the IAM console, export the credentials to a CSV file and read them in with the `aws configure import` command of the AWS CLI (NB: this requires v2 of the CLI).
+
+## Sitemap generation
+
+You can programmatically generate the sitemap by executing the `generate_sitemap.py` script in the root folder:
+```
+python generate_sitemap.py
+```

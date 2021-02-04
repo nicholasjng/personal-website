@@ -2,6 +2,9 @@
 # get short version of the HEAD's git hash
 GITHASH=`git rev-parse --short HEAD`
 
+#generate sitemap XML document
+python3 generate_sitemap.py
+
 npm run build
 
 # at this point, we have an out directory as follows
