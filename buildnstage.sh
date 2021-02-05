@@ -5,6 +5,27 @@ GITHASH=`git rev-parse --short HEAD`
 #generate sitemap XML document
 python3 generate_sitemap.py
 
+(cd public/assets && 
+  find . -type f \( -name  '*.png' -o  -name '*.jpg' \) ! -path "./about/*" ! -path "./og/*" | while read IMAGE; do
+
+    echo $IMAGE
+    # split off extension
+    IMAGE_NOEXT=${IMAGE:r}
+    echo $IMAGE_NOEXT
+
+    width_array=(384 512 768 1024 1280 1536 2048)
+
+    for width in $width_array; do
+      # cp all files to versions without extension
+      cwebp -q 80 -resize $width 0 $IMAGE -o ${IMAGE_NOEXT}-${width}.webp
+    done
+
+    if [ $? -ne 0 ]; then
+      echo "***** Failed converting .jpg images to .webp format."
+      exit 1
+    fi
+  done)
+
 npm run build
 
 # at this point, we have an out directory as follows
