@@ -10,3 +10,8 @@ aws s3 sync \
   --delete \
   --cache-control max-age=0,no-cache \
   --acl public-read --profile $AWS_PROFILE
+
+
+echo "***** Removing temporary .webp files."
+# remove temporary files again
+find ./public -name "*.webp" -type f -delete
