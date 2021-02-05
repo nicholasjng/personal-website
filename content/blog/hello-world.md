@@ -5,7 +5,7 @@ coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2021-01-27T16:36:37.257Z'
 author:
   name: Nicholas Junge
-  picture: '/assets/blog/authors/nicholas.jpeg'
+  picture: '/assets/blog/authors/nicholas.jpg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
 ---
