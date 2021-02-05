@@ -26,7 +26,7 @@ export default function CoverImage({
 
   const srcSet = imageResizeTargets
     .map((size: number) => {
-      return `${filename}-${size}.${extension} ${size}w`;
+      return `${filename}-${size}.webp ${size}w`;
     })
     .join(', ');
 
