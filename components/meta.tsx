@@ -38,8 +38,7 @@ export default function Meta() {
       />
       <meta property="og:image" content={HOME_OG_IMAGE} />
       <meta property="og:title" content={`My personal website | Nicholas Junge`} />
-      <meta property="og:description" 
-      content={`Blog posts, photo reviews, math and tech articles.`} />
+      <meta property="og:description" content={`Blog posts, photo reviews, math and tech articles.`} />
     </Head>
   );
 }
