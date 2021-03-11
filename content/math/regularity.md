@@ -1,13 +1,13 @@
 ---
 title: 'My thesis: What is a regular time series?'
 excerpt: 'Everybody knows what \"regular\" means, but how do you translate your intuition into math?'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/math/regularity/autoregressive_sample.png'
 date: '2021-01-27T16:36:37.257Z'
 author:
   name: Nicholas Junge
   picture: '/assets/blog/authors/nicholas.jpg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/math/regularity/autoregressive_sample.png'
 ---
 
 # Regularity detection in time series
