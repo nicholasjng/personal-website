@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.1.0",
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
@@ -16,8 +17,8 @@
     "next": "^10.0.0",
     "next-plugin-yaml": "^1.0.1",
     "postcss": "^8.2.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-share": "^4.3.1",
     "rehype-katex": "^4.0.0",
     "rehype-stringify": "^8.0.0",
