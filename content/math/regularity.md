@@ -1,16 +1,14 @@
 ---
-title: 'My thesis: What is a regular time series?'
-excerpt: 'Everybody knows what \"regular\" means, but how do you translate your intuition into math?'
+title: 'What is a regular time series?'
+excerpt: 'Everybody knows what "regular" means, but how do you translate your intuition into math?'
 coverImage: '/assets/math/regularity/autoregressive_sample.png'
-date: '2021-01-27T16:36:37.257Z'
+date: '2021-03-11T19:49:57+0100'
 author:
   name: Nicholas Junge
   picture: '/assets/blog/authors/nicholas.jpg'
 ogImage:
   url: '/assets/math/regularity/autoregressive_sample.png'
 ---
-
-# Regularity detection in time series
 
 I wrote my thesis on time series analysis last year at the Technical University of Munich (TUM), and I am really happy with the direction that it took. 
 
@@ -52,7 +50,7 @@ The magic word in this situation is **predictable**. To be predictable means to 
 
 In the Fourier analogy, the coin behaves like a single wave with period 2, since heads follows tails follows heads. Therefore, in a [periodogram](https://en.wikipedia.org/wiki/Periodogram), which carries the frequency information of the time series, the regular coin flip will appear as a small number of distinct spikes.
 
-![Deterministic time series](../../public/assets/math/functional-analysis/deterministic_spectraldensity.png)
+![Deterministic time series](/assets/math/regularity/deterministic_spectraldensity.png)
 
 And the other one? We can reason about that, too. Since it is random, the time between heads is random, and thus the frequency of heads must also be random. No frequency is privileged, so the frequency distribution should appear approximately uniform. This is the defining characteristic of a *white noise* time series.
 
@@ -62,9 +60,9 @@ And the best part: If you compute the Shannon entropy of both of these, the two 
 
 Unfortunately, not quite. There are multiple problems that I omitted here, but that need to be worked out first:
 
-1. What even is the Fourier Transform of a time series supposed to be? How would you define the Fourier Transform of a stochastic process? 
+1. What even is the Fourier Transform of a time series supposed to be? How would you define the Fourier Transform of a stochastic process?
 2. The periodogram is bad as a spectral density estimator - it does not even converge pointwise to the expected value of the spectral density. You need to first "repair" it by using smoothing methods.
 3. Binary events need to be binned and resampled - depending on the binning frequency, you end up with more or fewer zeros, which also influences your signal.
 
-This concludes my first post on my thesis project. If you are interested, feel free to check out the
-[GitHub repository](https://github.com/njunge94/timeseries-thesis) with my thesis code, which contains Cython-powered implementations of ApEn and its derivatives. See you for the next one!
+This concludes my first post on my thesis. If you are interested, feel free to check out the
+[GitHub repository](https://github.com/njunge94/timeseries-thesis) with my thesis code, which contains Cython-powered implementations of ApEn and its relatives. See you for the next one!
