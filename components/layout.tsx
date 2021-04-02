@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 import { Router, useRouter } from "next/router";
-import PropTypes from "prop-types";
+
 import Header from "./header";
 import Footer from "./footer";
 import Meta from "./meta";
 import Container from "./container";
 
 type Props = {
-  preview: boolean
+  preview?: boolean
   children: ReactNode
 };
 
@@ -25,12 +25,3 @@ export default function Layout({ preview, children }: Props) {
     </>
   );
 }
-
-Layout.defaultProps = {
-  preview: false,
-};
-
-Layout.propTypes = {
-  preview: PropTypes.bool,
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
-};

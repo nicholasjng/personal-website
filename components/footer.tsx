@@ -2,7 +2,6 @@ import { GITHUB_REPO } from "../lib/constants";
 import SocialFooter from "./social-footer";
 import FooterNav from "./footer-nav";
 import navFooter from "../config/footerNav.yml";
-import MetaTitle from "./meta-title";
 import SectionLinks from "./section-links";
 
 export default function Footer() {
@@ -11,11 +10,15 @@ export default function Footer() {
       <section className="container mx-auto sm:w-full xl:w-2/3 px-10 lg:px-20 flex sm:flex-col lg:flex-row flex-wrap justify-between mb-16">
         <SocialFooter />
         <FooterNav>
-          <MetaTitle>{navFooter.sections.title}</MetaTitle>
+          <h1 className="font-bold text-lg leading-10 align-text-top uppercase tracking-wider text-gray-500">
+            {navFooter.sections.title}
+          </h1>
           <SectionLinks links={navFooter.sections.items} />
         </FooterNav>
         <FooterNav>
-          <MetaTitle>{navFooter.channels.title}</MetaTitle>
+          <h1 className="font-bold text-lg leading-10 align-text-top uppercase tracking-wider text-gray-500">
+            {navFooter.channels.title}
+          </h1>
           <SectionLinks links={navFooter.channels.items} />
         </FooterNav>
       </section>

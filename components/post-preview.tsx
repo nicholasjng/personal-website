@@ -30,8 +30,8 @@ export default function PostPreview({
           slug={slug}
           title={title}
           src={coverImage}
-          height={278}
-          width={556}
+          height={250}
+          width={500}
           section={section}
         />
       </div>
