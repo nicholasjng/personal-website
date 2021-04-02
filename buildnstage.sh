@@ -6,14 +6,13 @@ GITHASH=`git rev-parse --short HEAD`
 python3 generate_sitemap.py
 
 (cd public/assets && 
-  find . -type f \( -name  '*.png' -o  -name '*.jpg' \) ! -path "./about/*" ! -path "./og/*" | while read IMAGE; do
+  # LATER: Wildcard once it is clear how to serve images with srcSets from Markdown
+  find . -type f \( -name  'cover.png' -o  -name 'cover.jpg' \) | while read IMAGE; do
 
-    echo $IMAGE
     # split off extension
     IMAGE_NOEXT=${IMAGE:r}
-    echo $IMAGE_NOEXT
 
-    width_array=(384 512 768 1024 1280 1536 2048)
+    width_array=(384 512 768 1024)
 
     for width in $width_array; do
       # cp all files to versions without extension
