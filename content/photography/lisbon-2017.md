@@ -2,7 +2,7 @@
 title: 'Portugal 2017: First touch'
 excerpt: 'Impressions of my first trip to Portugal. A really groundbreaking journey.'
 coverImage: '/assets/photography/lisbon-2017/cover.jpg'
-date: '2021-01-27T16:36:37.257Z'
+date: '2021-04-11T10:57:27Z'
 author:
   name: Nicholas Junge
   picture: '/assets/blog/authors/nicholas.jpg'
@@ -67,4 +67,4 @@ Later that day, we went on the train again and went back to Porto, from where we
 
 I have much more photo material I could post here, but I think this will do nicely for now. Bottom line - the Leica plus two lenses max is your best friend on a half-week city trip abroad where every gram counts.
 
-Portugal is definitely worth a visit! This one touched just the biggest two towns, and yet we got three days and change full of action. To be clear, the weather being a cozy 18-21 degrees constantly, with cloud-free skies, certainly did a large part for the experience. But a lot of the journey is so memorable, even after three and a half years after as I am writing this, because of the small things falling into place - constantly getting lucky with good restaurants, the weather (at that time a year later, the city was engulfed in storms), and the culture (certainly as warm as the weather!).
+Portugal is definitely worth a visit! This one touched just the biggest two towns, and yet we got three days and change full of action. To be clear, the weather being a cozy 18-21 degrees constantly, with cloud-free skies, certainly did a large part for the experience. But a lot of the journey is so memorable, even after three and a half years after as I am writing this, because of the small things falling into place - constantly getting lucky with good restaurants, the weather (at that time a year later, the city was engulfed in storms), and the culture (certainly as warm as the weather!). So whenever it is possible again, I will definitely come back!
