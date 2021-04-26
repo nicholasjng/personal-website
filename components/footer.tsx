@@ -1,8 +1,20 @@
 import { GITHUB_REPO } from "../lib/constants";
+import { ReactNode } from "react";
 import SocialFooter from "./social-footer";
-import FooterNav from "./footer-nav";
 import navFooter from "../config/footerNav.yml";
 import SectionLinks from "./section-links";
+
+type Props = {
+  children: ReactNode
+}
+
+const FooterNav = ({ children }: Props) => (
+  <div className="flex flex-col items-center xl:items-start w-full pt-20 xl:pt-0 xl:w-1/4">
+    <div className="inline-flex flex-col">
+      {children}
+    </div>
+  </div>
+);
 
 export default function Footer() {
   return (

@@ -1,9 +1,15 @@
 import Link from "next/link";
-import HeaderLink from "./headerlink";
 import navHeader from "../config/headerNav.yml";
 
 type Props = {
   location: string
+}
+
+type LinkProps = {
+  isActive: boolean,
+  title: string,
+  to: string,
+  spanColor?: number
 }
 
 type LinkItem = {
@@ -12,6 +18,20 @@ type LinkItem = {
   activeSelector: string
   spanColor: number
 }
+
+const HeaderLink = ({ isActive, title, to, spanColor }: LinkProps) => (
+  <Link href={to}>
+    <a
+      href={to}
+      className={`relative hover:text-nord-${spanColor} flex-row items-center px-2 md:px-6 font-normal ease-out`}
+    >
+      {title}
+      {isActive && (
+        <span className={`absolute -bottom-1.5 h-1 left-0 right-0 bg-nord-${spanColor}`} />
+      )}
+    </a>
+  </Link>
+);
 
 export default function Header({ location }: Props) {
   return (

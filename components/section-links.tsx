@@ -18,5 +18,4 @@ const SectionLinks = ({ links }) => links.map((item: LinkItem) => (
   )
 );
 
-
 export default SectionLinks;
