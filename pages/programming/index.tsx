@@ -1,66 +1,20 @@
-import Head from "next/head";
-import Layout from "../../components/layout";
-import Container from "../../components/container";
-import HeroPost from "../../components/hero-post";
-import PostList from "../../components/post-list";
-import Placeholder from "../../components/placeholder";
 import { getAllPosts } from "../../lib/api";
 import Post from "../../types/post";
-import Intro from "../../components/intro";
-
-const BlogIntro = () => (
-  <p className="text-xl mb-20">
-    All my programming / computer-related content pieces.
-    I am really into tech and software development, especially when it
-    has to do with math and physics as well!
-  </p>
-);
+import IndexPage from "../../components/index-page";
+import indexItems from "../../config/indexPages.yml";
+import { DEFAULT_ATTRIBUTES } from "../../lib/constants";
 
 type Props = {
   allProgrammingPosts: Post[]
 }
 
-export default function BlogIndex({ allProgrammingPosts }: Props) {
-  const heroPost = allProgrammingPosts[0];
-  const morePosts = allProgrammingPosts.slice(1);
-
-  return (
-    <Layout>
-      <Head>
-        <title>Tech and code content</title>
-      </Head>
-      <Container>
-        <Intro>Tech & code.</Intro>
-        <BlogIntro />
-        {allProgrammingPosts.length === 0 && <Placeholder />}
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-            section={heroPost.section}
-          />
-        )}
-        {morePosts.length > 0 && <PostList posts={morePosts} />}
-      </Container>
-    </Layout>
-  );
+export default function ProgrammingIndex({ allProgrammingPosts }: Props) {
+  return <IndexPage idxItem={indexItems.programming} allPosts={allProgrammingPosts} />;
 }
 
 export async function getStaticProps() {
-  const sectionType = "programming";
-  const allProgrammingPosts = getAllPosts(sectionType, [
-    "title",
-    "date",
-    "slug",
-    "section",
-    "author",
-    "coverImage",
-    "excerpt",
-  ]);
+  const sectionType = indexItems.programming.sectionType;
+  const allProgrammingPosts = getAllPosts(sectionType, DEFAULT_ATTRIBUTES);
 
   return {
     props: { allProgrammingPosts },

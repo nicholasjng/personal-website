@@ -1,59 +1,20 @@
-import Head from "next/head";
-import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
-import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Post from "../types/post";
+import IndexPage from "../components/index-page";
+import indexItems from "../config/indexPages.yml";
+import { DEFAULT_ATTRIBUTES } from "../lib/constants";
 
 type Props = {
   allPosts: Post[]
 }
 
-export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
-
-  return (
-    <>
-      <Layout>
-        <Head>
-          <title>
-            Home
-          </title>
-        </Head>
-        <Container>
-          <Intro>Latest.</Intro>
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-              section={heroPost.section}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
-  );
+export default function HomeIndex({ allPosts }: Props) {
+  return <IndexPage idxItem={indexItems.home} allPosts={allPosts} />;
 }
 
 export async function getStaticProps() {
-  const sectionType = "blog";
-  const allPosts = getAllPosts(sectionType, [
-    "title",
-    "date",
-    "slug",
-    "section",
-    "author",
-    "coverImage",
-    "excerpt",
-  ]);
+  const sectionType = indexItems.blog.sectionType;
+  const allPosts = getAllPosts(sectionType, DEFAULT_ATTRIBUTES);
 
   return {
     props: { allPosts },

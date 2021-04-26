@@ -12,7 +12,7 @@ export default function AboutIndex({ preview }: Props) {
   return (
     <Layout>
       <Head>
-        <title>About me</title>
+        <title>About me.</title>
       </Head>
       <Container>
         <Intro>About me.</Intro>
