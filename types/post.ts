@@ -5,12 +5,9 @@ type PostType = {
   section: string;
   title: string;
   date: string;
-  coverImage: string;
+  ogImage: string;
   author: Author;
   excerpt: string;
-  ogImage: {
-    url: string;
-  };
   content: string;
 };
 
