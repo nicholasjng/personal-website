@@ -1,13 +1,11 @@
 ---
 title: 'Portugal 2017: First touch'
 excerpt: 'Impressions of my first trip to Portugal. A really groundbreaking journey.'
-coverImage: '/assets/photography/lisbon-2017/cover.jpg'
+ogImage: '/assets/photography/lisbon-2017/cover.jpg'
 date: '2021-04-11T10:57:27Z'
 author:
   name: Nicholas Junge
   picture: '/assets/blog/authors/nicholas.jpg'
-ogImage:
-  url: '/assets/photography/lisbon-2017/cover.jpg'
 ---
 
 So I have always been a big fan of Scandinavia in general. I went to Bergen, Norway to study via the Erasmus program, 

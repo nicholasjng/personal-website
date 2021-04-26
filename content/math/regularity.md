@@ -1,13 +1,11 @@
 ---
 title: 'What is a regular time series?'
 excerpt: 'Everybody knows what "regular" means, but how do you translate your intuition into math?'
-coverImage: '/assets/math/regularity/cover.png'
+ogImage: '/assets/math/regularity/cover.png'
 date: '2021-03-11T19:49:57+0100'
 author:
   name: Nicholas Junge
   picture: '/assets/blog/authors/nicholas.jpg'
-ogImage:
-  url: '/assets/math/regularity/cover.png'
 ---
 
 I wrote my thesis on time series analysis last year at the Technical University of Munich (TUM), and I am really happy with the direction that it took. 
