@@ -27,7 +27,9 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# rc files
+# rc files & configs
+/.vscode
 .stylelintrc
 
+# generated images
 *.webp

@@ -18,7 +18,7 @@ export default function PostHeader({ title, coverImage, date, section, author }:
     <>
       <PostTitle>{title}</PostTitle>
       <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} height={500} width={1000} section={section}/>
+        <CoverImage title={title} src={coverImage} width={1000}/>
       </div>
       <div className="flex justify-between items-center max-w-2xl mx-auto">
         <div className="flex mb-6">

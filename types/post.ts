@@ -9,6 +9,7 @@ type PostType = {
   author: Author;
   excerpt: string;
   content: string;
+  hashtags: string;
 };
 
 export default PostType;

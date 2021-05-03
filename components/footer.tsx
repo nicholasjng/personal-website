@@ -2,11 +2,28 @@ import { GITHUB_REPO } from "../lib/constants";
 import { ReactNode } from "react";
 import SocialFooter from "./social-footer";
 import navFooter from "../config/footerNav.yml";
-import SectionLinks from "./section-links";
+import CustomLink from "./custom-link";
 
 type Props = {
   children: ReactNode
 }
+
+type LinkItem = {
+  external: boolean
+  to: string
+  title:string
+}
+
+const SectionLinks = ({ links }) => links.map((item: LinkItem) => (
+  <CustomLink
+        key={item.title}
+        href={item.to}
+        target={item.external ? "_blank" : "_self"}
+        rel="noopener">
+    {item.title}
+  </CustomLink>
+  )
+);
 
 const FooterNav = ({ children }: Props) => (
   <div className="flex flex-col items-center xl:items-start w-full pt-20 xl:pt-0 xl:w-1/4">

@@ -1,47 +1,54 @@
+import Link from "next/link";
+import { MAIN_AUTHOR } from "../lib/constants";
 import Author from "../types/author";
+import Avatar from "./avatar";
+import CoverImage from "./cover-image";
+import DateFormatter from "./date-formatter";
+import HashtagList from "./hashtag-list";
 
 type Props = {
-    title: string
-    section: string
-    description: string
-    author: Author
+  title: string,
+  coverImage?: string,
+  date: string,
+  excerpt: string,
+  author?: Author,
+  slug: string,
+  section: string,
+  hashtags?: string,
 }
 
-export default function PostCard({ props: Props }) {
-  return (
-    <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
-      <a href="#" className="w-full block h-full">
-        <img
-          alt="blog photo"
-          src="/images/blog/1.jpg"
-          className="max-h-40 w-full object-cover"
-        />
-        <div className="bg-white dark:bg-gray-800 w-full p-4">
-          <p className="text-indigo-500 text-md font-medium">Article</p>
-          <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
-            Supercharged !
-          </p>
-          <p className="text-gray-400 dark:text-gray-300 font-light text-md">
-            The new supercar is here, 543 cv and 140 000$. This is best racing
-            GT about 7 years on...
-          </p>
-          <div className="flex items-center mt-4">
-            <a href="#" className="block relative">
-              <img
-                alt="profil"
-                src="/images/person/6.jpg"
-                className="mx-auto object-cover rounded-full h-10 w-10 "
-              />
-            </a>
-            <div className="flex flex-col justify-between ml-4 text-sm">
-              <p className="text-gray-800 dark:text-white">Jean Jacques</p>
-              <p className="text-gray-400 dark:text-gray-300">
-                20 mars 2029 - 6 min read
-              </p>
-            </div>
-          </div>
-        </div>
-      </a>
+const PostCard = ({  
+  title,
+  coverImage,
+  date,
+  excerpt,
+  author,
+  slug,
+  section,
+  hashtags
+}: Props) => (
+  <div className="rounded overflow-hidden shadow-lg">
+    {coverImage && 
+    <CoverImage
+    slug={slug}
+    title={title}
+    src={coverImage}
+    width={500}
+    />}
+    <div className="px-6 py-4">
+      <h3 className="font-bold text-xl mb-2">
+        <Link as={`/${section}/${slug}`} href={`/${section}/[slug]`}>
+          <a className="hover:underline">{title}</a>
+        </Link>
+      </h3>
+      <div className="text-gray-700 text-base mb-2">
+        <p className="mb-3">{excerpt}</p>
+        <DateFormatter dateString={date} />
+      </div>
+      {author.name !== MAIN_AUTHOR && <Avatar name={author.name} picture={author.picture} />}
     </div>
-  );
-}
+    {hashtags && <HashtagList hashtags={hashtags}/>}
+</div>
+);
+
+export default PostCard;

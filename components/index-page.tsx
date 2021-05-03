@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Layout from "./layout";
 import Container from "./container";
-import HeroPost from "./hero-post";
-import PostList from "./post-list";
 import Placeholder from "./placeholder";
 import Post from "../types/post";
 import Intro from "../components/intro";
+import MoreStories from "./more-stories";
+import HeroCard from "./hero-card";
 
 type IndexItem = {
   intro: string
@@ -33,7 +33,7 @@ export default function IndexPage({idxItem, allPosts}: Props) {
         {idxItem.desc && <p className="text-xl mb-20">{idxItem.desc}</p>}
         {allPosts.length === 0 && <Placeholder />}
         {heroPost && (
-          <HeroPost
+          <HeroCard
             title={heroPost.title}
             coverImage={heroPost.ogImage}
             date={heroPost.date}
@@ -41,9 +41,10 @@ export default function IndexPage({idxItem, allPosts}: Props) {
             slug={heroPost.slug}
             section={heroPost.section}
             excerpt={heroPost.excerpt}
+            hashtags={heroPost.hashtags}
           />
         )}
-        {morePosts.length > 0 && <PostList posts={morePosts} />}
+        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
     </Layout>
   );
