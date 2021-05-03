@@ -1,6 +1,0 @@
-{
-    "javascript.validate.enable": false,
-    "editor.tabSize": 2,
-    "terminal.integrated.rendererType": "auto",
-    "python.pythonPath": "/usr/local/bin/python3"
-}
