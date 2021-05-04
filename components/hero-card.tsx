@@ -7,14 +7,14 @@ import DateFormatter from "./date-formatter";
 import HashtagList from "./hashtag-list";
 
 type Props = {
-  title: string,
-  coverImage: string,
-  date: string,
-  excerpt: string,
-  author?: Author,
-  slug: string,
-  section: string,
-  hashtags?: string,
+  title: string
+  coverImage: string
+  date: string
+  excerpt: string
+  author?: Author
+  slug: string
+  section: string
+  hashtags?: string
 }
 
 const HeroCard = ({  

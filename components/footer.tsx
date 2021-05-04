@@ -1,8 +1,9 @@
-import { GITHUB_REPO } from "../lib/constants";
 import { ReactNode } from "react";
 import SocialFooter from "./social-footer";
 import navFooter from "../config/footerNav.yml";
 import CustomLink from "./custom-link";
+
+const GITHUB_REPO = "https://github.com/njunge94/personal-website";
 
 type Props = {
   children: ReactNode

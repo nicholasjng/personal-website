@@ -1,7 +1,8 @@
 ---
 title: 'The journey begins'
 excerpt: 'Hopefully, the first of many posts!'
-ogImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/blog/hello-world/cover.jpg'
+ogImage: 'assets/og/hello-world.jpg'
 date: '2021-01-27T16:36:37.257Z'
 author:
   name: Nicholas Junge

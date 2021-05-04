@@ -9,11 +9,10 @@ type Props = {
   title: string
   coverImage: string
   date: string
-  section: string
   author: Author
 }
 
-export default function PostHeader({ title, coverImage, date, section, author }: Props) {
+export default function PostHeader({ title, coverImage, date, author }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>

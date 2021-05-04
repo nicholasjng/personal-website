@@ -1,7 +1,8 @@
 ---
 title: 'What is a regular time series?'
 excerpt: 'Everybody knows what "regular" means, but how do you translate your intuition into math?'
-ogImage: '/assets/math/regularity/cover.png'
+coverImage: '/assets/math/regularity/cover.png'
+ogImage: 'assets/og/regularity.png'
 date: '2021-03-11T19:49:57+0100'
 author:
   name: Nicholas Junge

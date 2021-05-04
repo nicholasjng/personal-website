@@ -6,6 +6,7 @@ import PostHeader from "../components/post-header";
 import Layout from "../components/layout";
 import PostTitle from "../components/post-title";
 import PostType from "../types/post";
+import { BASE_URL, HOME_OG_IMAGE } from "../lib/constants";
 
 type Props = {
   post: PostType
@@ -19,6 +20,8 @@ export default function PostPage({ post, morePosts, preview }: Props) {
     return <ErrorPage statusCode={404} />;
   }
 
+  const ogImage = `${BASE_URL}/${post.ogImage || HOME_OG_IMAGE}`
+
   return (
     <Layout preview={preview}>
       {router.isFallback ? (
@@ -28,14 +31,17 @@ export default function PostPage({ post, morePosts, preview }: Props) {
           <article className=" mb-32">
             <Head>
               <title>{post.title} - Nicholas Junge</title>
-              <meta property="og:image" content={post.ogImage} />
+              <meta name="description" content={post.excerpt} />
+              <meta name="author" content={post.author.name} />
+              {/* OG Properties */}
+              <meta property="og:title" content={post.title} />
+              <meta property="og:image" content={ogImage} />
               <meta property="og:description" content={post.excerpt} />
             </Head>
             <PostHeader
               title={post.title}
-              coverImage={post.ogImage}
+              coverImage={post.coverImage}
               date={post.date}
-              section={post.section}
               author={post.author}
             />
             <PostBody content={post.content} />

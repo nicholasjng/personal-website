@@ -1,7 +1,8 @@
 ---
 title: 'Portugal 2017: First touch'
 excerpt: 'Impressions of my first trip to Portugal. A really groundbreaking journey.'
-ogImage: '/assets/photography/lisbon-2017/cover.jpg'
+coverImage: '/assets/photography/lisbon-2017/cover.jpg'
+ogImage: 'assets/og/lisbon-2017.jpg'
 date: '2021-04-11T10:57:27Z'
 author:
   name: Nicholas Junge

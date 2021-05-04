@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { HOME_OG_IMAGE } from "../lib/constants";
 
 export default function Meta() {
   return (
@@ -32,13 +31,6 @@ export default function Meta() {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
-        name="description"
-        content={`A statically generated personal website using React JS and Next.js.`}
-      />
-      <meta property="og:image" content={HOME_OG_IMAGE} />
-      <meta property="og:title" content={`My personal website | Nicholas Junge`} />
-      <meta property="og:description" content={`Blog posts, photo reviews, math and tech articles.`} />
     </Head>
   );
 }

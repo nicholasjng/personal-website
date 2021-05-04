@@ -1,24 +1,25 @@
 home:
   intro: Latest.
   sectionType: blog
-  title: Home.
+  title: Home
+  desc: My personal website, made with React and next.js. Contains blog posts, photo reviews, math and tech articles.
 blog:
   intro: My Blog.
   sectionType: blog
-  title: Blog Posts.
+  title: Blog Posts
   desc: All my blog posts and content pieces on different topics I feel passionate about.
 math:
   intro: Math & Physics.
   sectionType: math
-  title: Mathematics & Physics Posts.
+  title: Mathematics & Physics Posts
   desc: All posts on mathematics and physics topics. As I am very invested in those fields, I decided to put them into their own category. Content can range from beginner level (no / little knowledge required) to more advanced level.
 photo:
   intro: Photography.
   sectionType: photography
-  title: Photography Blogs and Reviews.
-  desc: All my photography content pieces. Content includes travel blogs / diaries as well as photography reviews, mostly of Leica lenses and cameras.
+  title: Photography Blogs and Reviews
+  desc: All my photography pieces. Content includes travel blogs / diaries as well as photography reviews, mostly of Leica lenses and cameras.
 programming:
   intro: Tech & Code.
   sectionType: programming
-  title: Tech & Code.
-  desc: All my programming / computer-related content pieces. I am really into tech and software development, especially when it has to do with math and physics as well!
+  title: Tech & Code
+  desc: All of my programming / tech-related content pieces. I am really into tech and software development, especially when it has to do with math and physics as well!

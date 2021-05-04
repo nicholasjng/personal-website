@@ -16,7 +16,7 @@ export default function MoreStories({ posts }: Props) {
           <PostCard
             key={post.slug}
             title={post.title}
-            coverImage={post.ogImage}
+            coverImage={post.coverImage}
             date={post.date}
             author={post.author}
             slug={post.slug}
