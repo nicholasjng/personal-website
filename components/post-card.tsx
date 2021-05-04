@@ -28,13 +28,12 @@ const PostCard = ({
   hashtags
 }: Props) => (
   <div className="rounded overflow-hidden shadow-lg">
-    {coverImage && 
-    <CoverImage
-    slug={slug}
-    title={title}
-    src={coverImage}
-    width={500}
-    />}
+    {coverImage && <CoverImage
+                    slug={slug}
+                    title={title}
+                    src={coverImage}
+                    width={500}/>
+    }
     <div className="px-6 py-4">
       <h3 className="font-bold text-xl mb-2">
         <Link as={`/${section}/${slug}`} href={`/${section}/[slug]`}>

@@ -12,21 +12,21 @@ type Props = {
   author: Author
 }
 
-export default function PostHeader({ title, coverImage, date, author }: Props) {
-  return (
-    <>
-      <PostTitle>{title}</PostTitle>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} width={1000}/>
+const PostHeader = ({ title, coverImage, date, author }: Props) => (
+  <>
+    <PostTitle>{title}</PostTitle>
+    <div className="mb-8 md:mb-16">
+      <CoverImage title={title} src={coverImage} width={1000}/>
+    </div>
+    <div className="flex justify-between items-center max-w-2xl mx-auto">
+      <div className="flex mb-6">
+        <Avatar name={author.name} picture={author.picture} />
       </div>
-      <div className="flex justify-between items-center max-w-2xl mx-auto">
-        <div className="flex mb-6">
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
-        <div className="flex text-lg">
-          <DateFormatter dateString={date} />
-        </div>
+      <div className="flex text-lg">
+        <DateFormatter dateString={date} />
       </div>
-    </>
+    </div>
+  </>
   );
-}
+
+export default PostHeader;

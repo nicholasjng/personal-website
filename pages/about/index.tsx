@@ -37,7 +37,8 @@ export default function AboutIndex({ preview }: Props) {
             </blockquote>
           </section>
           <p className="mt-4">
-            Hello there! I&apos;m Nicholas, a mathematician / software engineer
+            Welcome to my corner of the internet! I&apos;m Nicholas, 
+            a mathematician / software engineer
             based in Munich, and I made this website in a private web
             development project. I use it as my personal creative outlet and as
             a place to write about things and topics that I am passionate about.
