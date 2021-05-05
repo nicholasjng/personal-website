@@ -2,8 +2,8 @@ import Post from "../types/post";
 import PostCard from "./post-card";
 
 type Props = {
-  posts: Post[]
-}
+  posts: Post[];
+};
 
 const MoreStories = ({ posts }: Props) => (
   <section>
@@ -26,6 +26,6 @@ const MoreStories = ({ posts }: Props) => (
       ))}
     </div>
   </section>
-  );
+);
 
 export default MoreStories;

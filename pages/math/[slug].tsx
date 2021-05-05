@@ -7,24 +7,28 @@ import indexItems from "../../config/indexPages.yml";
 import "katex/dist/katex.min.css";
 
 type Props = {
-  post: PostType
-  morePosts: PostType[]
-  preview?: boolean
-}
+  post: PostType;
+  morePosts: PostType[];
+  preview?: boolean;
+};
 
 export default function MathPost({ post, morePosts, preview }: Props) {
-  return <PostPage post={post} morePosts={morePosts} preview={preview}/>
+  return <PostPage post={post} morePosts={morePosts} preview={preview} />;
 }
 
 type Params = {
   params: {
-    slug: string,
-  }
-}
+    slug: string;
+  };
+};
 
 // TODO: Make a factory for getStaticProps and getStaticPaths
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, indexItems.math.sectionType, DEFAULT_ATTRIBUTES.concat(CONTENT_ATTRIBUTE));
+  const post = getPostBySlug(
+    params.slug,
+    indexItems.math.sectionType,
+    DEFAULT_ATTRIBUTES.concat(CONTENT_ATTRIBUTE)
+  );
 
   const content = await markdownToHtml(post.content || "");
 
@@ -32,7 +36,7 @@ export async function getStaticProps({ params }: Params) {
     props: {
       post: {
         ...post,
-        content
+        content,
       },
     },
   };

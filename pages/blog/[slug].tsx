@@ -6,18 +6,21 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import PostPageType from "../../types/post-page";
 
 export default function BlogPost({ post, morePosts, preview }: PostPageType) {
-  return <PostPage post={post} morePosts={morePosts} preview={preview}/>
+  return <PostPage post={post} morePosts={morePosts} preview={preview} />;
 }
 
 type Params = {
   params: {
-    slug: string,
-  }
-}
+    slug: string;
+  };
+};
 
 export async function getStaticProps({ params }: Params) {
-
-  const post = getPostBySlug(params.slug, indexItems.blog.sectionType, DEFAULT_ATTRIBUTES.concat(CONTENT_ATTRIBUTE));
+  const post = getPostBySlug(
+    params.slug,
+    indexItems.blog.sectionType,
+    DEFAULT_ATTRIBUTES.concat(CONTENT_ATTRIBUTE)
+  );
   const content = await markdownToHtml(post.content || "");
 
   return {

@@ -5,8 +5,8 @@ import indexItems from "../../config/indexPages.yml";
 import { DEFAULT_ATTRIBUTES } from "../../lib/constants";
 
 type Props = {
-  allBlogPosts: Post[]
-}
+  allBlogPosts: Post[];
+};
 
 export default function BlogIndex({ allBlogPosts }: Props) {
   return <IndexPage idxItem={indexItems.blog} allPosts={allBlogPosts} />;

@@ -9,10 +9,10 @@ import PostType from "../types/post";
 import { BASE_URL, HOME_OG_IMAGE } from "../lib/constants";
 
 type Props = {
-  post: PostType
-  morePosts: PostType[]
-  preview: boolean
-}
+  post: PostType;
+  morePosts: PostType[];
+  preview: boolean;
+};
 
 export default function PostPage({ post, morePosts, preview }: Props) {
   const router = useRouter();
@@ -20,7 +20,7 @@ export default function PostPage({ post, morePosts, preview }: Props) {
     return <ErrorPage statusCode={404} />;
   }
 
-  const ogImage = `${BASE_URL}/${post.ogImage || HOME_OG_IMAGE}`
+  const ogImage = `${BASE_URL}/${post.ogImage || HOME_OG_IMAGE}`;
 
   return (
     <Layout preview={preview}>

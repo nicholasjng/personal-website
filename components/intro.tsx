@@ -1,6 +1,6 @@
 type Props = {
-  children: string
-}
+  children: string;
+};
 
 const Intro = ({ children }: Props) => (
   <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
@@ -8,6 +8,6 @@ const Intro = ({ children }: Props) => (
       {children}
     </h1>
   </section>
-  );
+);
 
 export default Intro;

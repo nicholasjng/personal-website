@@ -5,11 +5,16 @@ import indexItems from "../../config/indexPages.yml";
 import { DEFAULT_ATTRIBUTES } from "../../lib/constants";
 
 type Props = {
-  allProgrammingPosts: Post[]
-}
+  allProgrammingPosts: Post[];
+};
 
 export default function ProgrammingIndex({ allProgrammingPosts }: Props) {
-  return <IndexPage idxItem={indexItems.programming} allPosts={allProgrammingPosts} />;
+  return (
+    <IndexPage
+      idxItem={indexItems.programming}
+      allPosts={allProgrammingPosts}
+    />
+  );
 }
 
 export async function getStaticProps() {

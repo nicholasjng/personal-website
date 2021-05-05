@@ -9,16 +9,16 @@ import {
   LinkedinIcon,
   RedditIcon,
   TwitterIcon,
-} from 'react-share';
+} from "react-share";
 
-import { Router, useRouter } from 'next/router';
-import { BASE_URL } from '../lib/constants';
+import { Router, useRouter } from "next/router";
+import { BASE_URL } from "../lib/constants";
 
 export default function SocialFooter() {
   const router = useRouter();
   const location = router.asPath;
 
-  const url = BASE_URL + (location === "/" ? "" : location)
+  const url = BASE_URL + (location === "/" ? "" : location);
 
   return (
     <nav className="mx-auto md:mx-0 space-x-2 self-center lg:self-start">

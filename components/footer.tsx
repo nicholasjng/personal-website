@@ -6,31 +6,30 @@ import CustomLink from "./custom-link";
 const GITHUB_REPO = "https://github.com/njunge94/personal-website";
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 type LinkItem = {
-  external: boolean
-  to: string
-  title:string
-}
+  external: boolean;
+  to: string;
+  title: string;
+};
 
-const SectionLinks = ({ links }) => links.map((item: LinkItem) => (
-  <CustomLink
-        key={item.title}
-        href={item.to}
-        target={item.external ? "_blank" : "_self"}
-        rel="noopener">
-    {item.title}
-  </CustomLink>
-  )
-);
+const SectionLinks = ({ links }) =>
+  links.map((item: LinkItem) => (
+    <CustomLink
+      key={item.title}
+      href={item.to}
+      target={item.external ? "_blank" : "_self"}
+      rel="noopener"
+    >
+      {item.title}
+    </CustomLink>
+  ));
 
 const FooterNav = ({ children }: Props) => (
   <nav className="flex flex-col items-center xl:items-start w-full pt-20 xl:pt-0 xl:w-1/4">
-    <div className="inline-flex flex-col">
-      {children}
-    </div>
+    <div className="inline-flex flex-col">{children}</div>
   </nav>
 );
 
@@ -63,6 +62,6 @@ const Footer = () => (
       </a>
     </section>
   </footer>
-  );
+);
 
 export default Footer;

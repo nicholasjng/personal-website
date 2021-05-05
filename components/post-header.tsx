@@ -4,19 +4,18 @@ import DateFormatter from "./date-formatter";
 import PostTitle from "./post-title";
 import Author from "../types/author";
 
-
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  author: Author
-}
+  title: string;
+  coverImage: string;
+  date: string;
+  author: Author;
+};
 
 const PostHeader = ({ title, coverImage, date, author }: Props) => (
   <>
     <PostTitle>{title}</PostTitle>
     <div className="mb-8 md:mb-16">
-      <CoverImage title={title} src={coverImage} width={1000}/>
+      <CoverImage title={title} src={coverImage} width={1000} />
     </div>
     <div className="flex justify-between items-center max-w-2xl mx-auto">
       <div className="flex mb-6">
@@ -27,6 +26,6 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => (
       </div>
     </div>
   </>
-  );
+);
 
 export default PostHeader;

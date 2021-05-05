@@ -5,19 +5,26 @@ import PostPage from "../../components/post-page";
 import { CONTENT_ATTRIBUTE, DEFAULT_ATTRIBUTES } from "../../lib/constants";
 import indexItems from "../../config/indexPages.yml";
 
-export default function ProgrammingPost({ post, morePosts, preview }: PostPageType) {
-  return <PostPage post={post} morePosts={morePosts} preview={preview}/>
+export default function ProgrammingPost({
+  post,
+  morePosts,
+  preview,
+}: PostPageType) {
+  return <PostPage post={post} morePosts={morePosts} preview={preview} />;
 }
 
 type Params = {
   params: {
-    slug: string,
-  }
-}
+    slug: string;
+  };
+};
 
 export async function getStaticProps({ params }: Params) {
-
-  const post = getPostBySlug(params.slug, indexItems.programming.sectionType, DEFAULT_ATTRIBUTES.concat(CONTENT_ATTRIBUTE));
+  const post = getPostBySlug(
+    params.slug,
+    indexItems.programming.sectionType,
+    DEFAULT_ATTRIBUTES.concat(CONTENT_ATTRIBUTE)
+  );
   const content = await markdownToHtml(post.content || "");
 
   return {

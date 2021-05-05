@@ -31,6 +31,6 @@ const Meta = () => (
     <meta name="theme-color" content="#000" />
     <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
   </Head>
-  );
+);
 
 export default Meta;

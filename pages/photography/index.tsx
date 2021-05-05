@@ -5,11 +5,13 @@ import indexItems from "../../config/indexPages.yml";
 import { DEFAULT_ATTRIBUTES } from "../../lib/constants";
 
 type Props = {
-  allPhotographyPosts: Post[]
-}
+  allPhotographyPosts: Post[];
+};
 
 export default function PhotographyIndex({ allPhotographyPosts }: Props) {
-  return <IndexPage idxItem={indexItems.photo} allPosts={allPhotographyPosts} />;
+  return (
+    <IndexPage idxItem={indexItems.photo} allPosts={allPhotographyPosts} />
+  );
 }
 
 export async function getStaticProps() {

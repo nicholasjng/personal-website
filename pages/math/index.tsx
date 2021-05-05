@@ -5,8 +5,8 @@ import indexItems from "../../config/indexPages.yml";
 import { DEFAULT_ATTRIBUTES } from "../../lib/constants";
 
 type Props = {
-  allMathPosts: Post[]
-}
+  allMathPosts: Post[];
+};
 
 export default function MathIndex({ allMathPosts }: Props) {
   return <IndexPage idxItem={indexItems.math} allPosts={allMathPosts} />;

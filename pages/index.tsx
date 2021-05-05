@@ -5,8 +5,8 @@ import indexItems from "../config/indexPages.yml";
 import { DEFAULT_ATTRIBUTES } from "../lib/constants";
 
 type Props = {
-  allPosts: Post[]
-}
+  allPosts: Post[];
+};
 
 export default function HomeIndex({ allPosts }: Props) {
   return <IndexPage idxItem={indexItems.home} allPosts={allPosts} />;

@@ -1,4 +1,3 @@
-
 const ExternalLinkSvg = () => (
   <svg
     x="0px"

@@ -1,8 +1,8 @@
 import DOMPurify from "isomorphic-dompurify";
 
 type Props = {
-  content: string
-}
+  content: string;
+};
 
 const PostBody = ({ content }: Props) => (
   <div className="max-w-2xl mx-auto">
@@ -13,6 +13,6 @@ const PostBody = ({ content }: Props) => (
       dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
     />
   </div>
-  );
+);
 
 export default PostBody;
