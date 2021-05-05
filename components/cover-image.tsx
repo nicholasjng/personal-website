@@ -35,7 +35,7 @@ export default function CoverImage({
       <img
       srcSet={srcSet}
       alt={`Cover Image for ${title}`}
-      className="sm: mx-0 shadow-sm hover:shadow-md transition-shadow duration-200"
+      className="sm:mx-0 shadow-sm hover:shadow-md transition-shadow duration-200"
       />
   );
 }
