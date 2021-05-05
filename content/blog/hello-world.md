@@ -1,6 +1,6 @@
 ---
 title: 'The journey begins'
-excerpt: 'Hopefully, the first of many posts!'
+description: 'Hopefully, the first of many posts!'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 ogImage: 'assets/og/hello-world.jpg'
 date: '2021-01-27T16:36:37.257Z'

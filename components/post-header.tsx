@@ -6,7 +6,7 @@ import Author from "../types/author";
 
 type Props = {
   title: string;
-  coverImage: string;
+  coverImage?: string;
   date: string;
   author: Author;
 };
@@ -14,9 +14,11 @@ type Props = {
 const PostHeader = ({ title, coverImage, date, author }: Props) => (
   <>
     <PostTitle>{title}</PostTitle>
-    <div className="mb-8 md:mb-16">
-      <CoverImage title={title} src={coverImage} width={1000} />
-    </div>
+    {coverImage && (
+      <div className="mb-8 md:mb-16">
+        <CoverImage title={title} src={coverImage} width={1000} />
+      </div>
+    )}
     <div className="flex justify-between items-center max-w-2xl mx-auto">
       <div className="flex mb-6">
         <Avatar name={author.name} picture={author.picture} />

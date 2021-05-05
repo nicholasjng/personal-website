@@ -10,7 +10,7 @@ type Props = {
   title: string;
   coverImage?: string;
   date: string;
-  excerpt: string;
+  description: string;
   author?: Author;
   slug: string;
   section: string;
@@ -21,7 +21,7 @@ const PostCard = ({
   title,
   coverImage,
   date,
-  excerpt,
+  description,
   author,
   slug,
   section,
@@ -38,7 +38,7 @@ const PostCard = ({
         </Link>
       </h3>
       <div className="text-gray-700 text-base mb-2">
-        <p className="mb-3">{excerpt}</p>
+        <p className="mb-3">{description}</p>
         <DateFormatter dateString={date} />
       </div>
       {author.name !== MAIN_AUTHOR && (

@@ -31,12 +31,12 @@ export default function PostPage({ post, morePosts, preview }: Props) {
           <article className=" mb-32">
             <Head>
               <title>{post.title} - Nicholas Junge</title>
-              <meta name="description" content={post.excerpt} />
+              <meta name="description" content={post.description} />
               <meta name="author" content={post.author.name} />
               {/* OG Properties */}
               <meta property="og:title" content={post.title} />
               <meta property="og:image" content={ogImage} />
-              <meta property="og:description" content={post.excerpt} />
+              <meta property="og:description" content={post.description} />
             </Head>
             <PostHeader
               title={post.title}

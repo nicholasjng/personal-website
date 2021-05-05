@@ -8,7 +8,7 @@ type PostType = {
   coverImage?: string;
   ogImage?: string;
   author: Author;
-  excerpt: string;
+  description: string;
   content: string;
   hashtags?: string;
 };

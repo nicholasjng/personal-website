@@ -1,6 +1,6 @@
 ---
 title: 'What is a regular time series?'
-excerpt: 'Everybody knows what "regular" means, but how do you translate your intuition into math?'
+description: 'Everybody knows what "regular" means, but how do you translate your intuition into math?'
 coverImage: '/assets/math/regularity/cover.png'
 ogImage: 'assets/og/regularity.png'
 date: '2021-03-11T19:49:57+0100'

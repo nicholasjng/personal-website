@@ -3,7 +3,6 @@ import { Router, useRouter } from "next/router";
 
 import Header from "./header";
 import Footer from "./footer";
-import Meta from "./meta";
 import Container from "./container";
 
 type Props = {
@@ -16,7 +15,6 @@ export default function Layout({ preview, children }: Props) {
   const location = router.pathname;
   return (
     <>
-      <Meta />
       <Header location={location} />
       <Container>
         <main className="min-h-screen">{children}</main>

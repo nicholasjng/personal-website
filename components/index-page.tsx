@@ -52,7 +52,7 @@ export default function IndexPage({ idxItem, allPosts }: Props) {
             author={heroPost.author}
             slug={heroPost.slug}
             section={heroPost.section}
-            excerpt={heroPost.excerpt}
+            description={heroPost.description}
             hashtags={heroPost.hashtags}
           />
         )}
