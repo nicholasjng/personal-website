@@ -25,6 +25,9 @@ python3 generate_sitemap.py
     fi
   done)
 
+# remove .next folder (see https://github.com/vercel/next.js/discussions/6009)
+npm run clean
+
 npm run build
 
 # at this point, we have an out directory as follows

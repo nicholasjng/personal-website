@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "clean": "npx rimraf .next"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.6.0",

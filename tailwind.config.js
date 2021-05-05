@@ -5,7 +5,7 @@ module.exports = {
     content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
     options: {
       safelist: {
-        deep: [/nord/],
+        deep: [/nord-1[1-5]/],
       },
     },
   },
