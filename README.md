@@ -48,3 +48,13 @@ You can programmatically generate the sitemap by executing the `generate_sitemap
 ```
 python generate_sitemap.py
 ```
+
+## Acknowledgements
+The tailwind typography configuration in `tailwind.config.js` is sourced from `timlrx`'s [next.js + Tailwind CSS starter blog template](https://github.com/timlrx/tailwind-nextjs-starter-blog). Credit has been given in the file itself.
+
+## Awesome next.js website building resources for inspiration
+* [next.js + Tailwind CSS starter blog by timlrx](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+* [leerob.io repository](https://github.com/leerob/leerob.io)
+* [next.js](https://nextjs.org/)
+* [reactjs.org repository](https://github.com/reactjs/reactjs.org)
+
