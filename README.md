@@ -50,7 +50,7 @@ python generate_sitemap.py
 ```
 
 ## Acknowledgements
-The tailwind typography configuration in `tailwind.config.js` is sourced from `timlrx`'s [next.js + Tailwind CSS starter blog template](https://github.com/timlrx/tailwind-nextjs-starter-blog). Credit has been given in the file itself.
+The tailwind typography configuration in `tailwind.config.js` is sourced from `timlrx`'s [next.js + Tailwind CSS starter blog template](https://github.com/timlrx/tailwind-nextjs-starter-blog). The appropriate license has been added in the file itself.
 
 ## Awesome next.js website building resources for inspiration
 * [next.js + Tailwind CSS starter blog by timlrx](https://github.com/timlrx/tailwind-nextjs-starter-blog)
