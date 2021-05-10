@@ -33,7 +33,9 @@ export default function PostPage({ post, morePosts, preview }: Props) {
               <title>{post.title} - Nicholas Junge</title>
               <meta name="description" content={post.description} />
               <meta name="author" content={post.author.name} />
+              <meta name="robots" content="index, follow, max-image-preview:standard" />
               {/* OG Properties */}
+              <meta property="og:locale" content="en_US" />
               <meta property="og:title" content={post.title} />
               <meta property="og:image" content={ogImage} />
               <meta property="og:description" content={post.description} />

@@ -1,7 +1,7 @@
 ---
 title: 'Solving differential equations in Python: ode-explorer'
 description: "Presenting a small library I wrote on numerical solving of ordinary differential equations (ODEs) in Python. Includes a history, anatomy of the project as well as a quick outlook on future directions."
-date: '2021-05-08T15:13:03Z'
+date: '2021-05-10T11:22:31Z'
 author:
   name: Nicholas Junge
   picture: '/assets/blog/authors/nicholas.jpg'
@@ -135,4 +135,4 @@ This project has just undergone a major change in that `numpy` usage was switche
 2. Performance! This requires using some low-level `jax` routines, which might not play nicely with metric logging out of the box.
 3. Making the `ODEModel` and `Metric` wrappers play nicely with JAX requires some type registration, so that XLA and the JAX core know what to expect.
 
-All in all, I am excited about heaving the project onto accelerators with JAX; it might be a while before a substantial uplift over numpy is achieved, though.
+All in all, I am excited about heaving the project onto accelerators with JAX; it might be a while before a substantial uplift over `numpy` is achieved, though.
