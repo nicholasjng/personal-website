@@ -8,7 +8,7 @@ author:
 hashtags: "python,jax,haiku,deep-learning,gpu-computing,style-transfer"
 ---
 
-*This post is a work in progress, just like the project itself! You can click here to go to the source code on [GitHub](https://github.com/njunge94/jax-styletransfer).*
+*This post is a work in progress, just like the project itself! You can find the source code on [GitHub](https://github.com/njunge94/jax-styletransfer).*
 
 So I decided to finally give JAX a go. I had discovered the project earlier in 2020, but never gotten around to using it. Usually, when I try to use a new computing / ML framework, my "Hello World" project is **neural style transfer**. So how did it go?
 
@@ -88,7 +88,7 @@ This is a little unintuitive at first, but not for long. Since we are only able 
 
 It all works by subclassing the `hk.Module` class, which represents a neural network building block just like in other DL Libs. When we calculate the style losses, we pass the result to `hk.set_state`, a state hook which updates the global state container with the result value for the appropriate name:
 
-```
+```python
 class ContentLoss(hk.Module):
     """Identity layer capturing the content loss between input and target."""
 
@@ -127,7 +127,7 @@ As in the paper, we decide to stand on the shoulders of giants: We are not inter
 
 Conceptually, this amounts to initializing the network parameters as constants: The `hk.initializers.Constant` API is what you want here. For more information and a really nice guide on how to load pretrained HuggingFace Transformers in Haiku, check out [this blog post on pragmatic.ml](https://www.pragmatic.ml/finetuning-transformers-with-jax-and-haiku/).
 
-Another nice thing about this: There is no need for calling any gradient hooks or setting disabling flags for gradient computation in backpropagation, as is required in libraries maintaining computation graphs - you just use what you need, and update only what you use. This leads to much more readable code, since there is no need to call obscure functions or set apocryphal option flags.
+Another nice thing about this: There is no need for calling any obscure gradient hooks or setting disabling flags for gradient computation in backpropagation, as is required in libraries maintaining computation graphs - you just use what you need, and update only what you use. This leads to much more readable code, since there is no need to call obscure functions or set apocryphal option flags.
 
 The first style transfer attempt was made with VGG-19, a convolutional neural network trained on the ImageNet dataset. In general, many different networks do the job; capturing the style / content losses at different depths will lead to different results. The repository contains functionality for loading models from HDF5 files; weights for a few example architectures are given in [F. Chollet's repository on deep learning models](https://github.com/fchollet/deep-learning-models/releases).
 
@@ -147,4 +147,4 @@ The algorithm was tested on the two example images from the [PyTorch Style Trans
 
 512 x 512 px takes excessively long on a MacBook Pro 13 2019 Intel CPU, so I went with my ITX machine (i5-10600K + RTX2060 Super) instead. There, after some CUDA install woes (that could be worth another entire article, god bless), I managed to do between 20 and 30 it/s on a single image pass in VGG19. 
 
-I suppose this program severely underutilizes the GPU; I might give the TensorBoard profiler a go to confirm this. Otherwise, code is reasonably clean, transforms to side-effect-free transforming is painless thanks to Haiku, and there is a lot of fuel left in the tank for both batches of images and also for tiling high-resolution images. A really good showing all around from JAX!
+I suppose this program severely underutilizes the GPU; I should give the TensorBoard profiler a go to check this. Otherwise, the code is reasonably clean, transforms to side-effect-free functions is painless thanks to Haiku, and there is a lot of fuel left in the tank for both batches of images and also for tiling high-resolution images. A really good showing all around from JAX!

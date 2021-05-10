@@ -16,7 +16,7 @@ python3 generate_sitemap.py
 
     for width in $width_array; do
       # cp all files to versions without extension
-      cwebp -q 80 -resize $width 0 $IMAGE -o ${IMAGE_NOEXT}-${width}.webp
+      cwebp -q 80 -quiet -resize $width 0 $IMAGE -o ${IMAGE_NOEXT}-${width}.webp
     done
 
     if [ $? -ne 0 ]; then

@@ -1,7 +1,7 @@
 ---
 title: 'The Leica Noctilux-M 75mm f/1.25: Fun at a cost'
 description: "My review of the Leica Noctilux 75mm for the M. I have had it in use for about a year, this article holds my personal opinion on the lens in terms of build quality, look, feel and more."
-date: '2021-05-08T15:13:03Z'
+date: '2021-05-09T17:58:54Z'
 coverImage: '/assets/photography/noct75-review/cover.jpg'
 ogImage: 'assets/og/noct75-review.jpg'
 author:

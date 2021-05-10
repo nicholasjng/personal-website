@@ -4,6 +4,7 @@ import PostPageType from "../../types/post-page";
 import PostPage from "../../components/post-page";
 import { CONTENT_ATTRIBUTE, DEFAULT_ATTRIBUTES } from "../../lib/constants";
 import indexItems from "../../config/indexPages.yml";
+import "katex/dist/katex.min.css";
 
 export default function ProgrammingPost({
   post,
