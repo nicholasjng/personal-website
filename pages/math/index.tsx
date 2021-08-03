@@ -8,7 +8,7 @@ type Props = {
   allMathPosts: Post[];
 };
 
-export default function MathIndex({ allMathPosts }: Props) {
+export default function MathIndex({ allMathPosts }: Props): JSX.Element {
   return <IndexPage idxItem={indexItems.math} allPosts={allMathPosts} />;
 }
 

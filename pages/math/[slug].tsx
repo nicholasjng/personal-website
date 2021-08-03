@@ -12,7 +12,11 @@ type Props = {
   preview?: boolean;
 };
 
-export default function MathPost({ post, morePosts, preview }: Props) {
+export default function MathPost({
+  post,
+  morePosts,
+  preview,
+}: Props): JSX.Element {
   return <PostPage post={post} morePosts={morePosts} preview={preview} />;
 }
 

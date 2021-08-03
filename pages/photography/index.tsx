@@ -8,7 +8,9 @@ type Props = {
   allPhotographyPosts: Post[];
 };
 
-export default function PhotographyIndex({ allPhotographyPosts }: Props) {
+export default function PhotographyIndex({
+  allPhotographyPosts,
+}: Props): JSX.Element {
   return (
     <IndexPage idxItem={indexItems.photo} allPosts={allPhotographyPosts} />
   );

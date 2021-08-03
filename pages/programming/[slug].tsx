@@ -10,7 +10,7 @@ export default function ProgrammingPost({
   post,
   morePosts,
   preview,
-}: PostPageType) {
+}: PostPageType): JSX.Element {
   return <PostPage post={post} morePosts={morePosts} preview={preview} />;
 }
 

@@ -8,7 +8,7 @@ type Props = {
   allPosts: Post[];
 };
 
-export default function HomeIndex({ allPosts }: Props) {
+export default function HomeIndex({ allPosts }: Props): JSX.Element {
   return <IndexPage idxItem={indexItems.home} allPosts={allPosts} />;
 }
 

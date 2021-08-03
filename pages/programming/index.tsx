@@ -8,7 +8,9 @@ type Props = {
   allProgrammingPosts: Post[];
 };
 
-export default function ProgrammingIndex({ allProgrammingPosts }: Props) {
+export default function ProgrammingIndex({
+  allProgrammingPosts,
+}: Props): JSX.Element {
   return (
     <IndexPage
       idxItem={indexItems.programming}

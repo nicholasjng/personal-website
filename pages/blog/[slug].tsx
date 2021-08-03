@@ -5,7 +5,11 @@ import indexItems from "../../config/indexPages.yml";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostPageType from "../../types/post-page";
 
-export default function BlogPost({ post, morePosts, preview }: PostPageType) {
+export default function BlogPost({
+  post,
+  morePosts,
+  preview,
+}: PostPageType): JSX.Element {
   return <PostPage post={post} morePosts={morePosts} preview={preview} />;
 }
 
