@@ -5,12 +5,18 @@ import matter from "gray-matter";
 const CONTENT_ROOT = "content";
 
 export function getPostSlugs(sectionType: string) {
-  const md_ext = ".md"
+  const md_ext = ".md";
   const postsDirectory = join(process.cwd(), CONTENT_ROOT, sectionType);
-  return fs.readdirSync(postsDirectory).filter((file) => (extname(file).toLowerCase() === md_ext));
+  return fs
+    .readdirSync(postsDirectory)
+    .filter((file) => extname(file).toLowerCase() === md_ext);
 }
 
-export function getPostBySlug(slug: string, sectionType: string, fields: string[] = []) {
+export function getPostBySlug(
+  slug: string,
+  sectionType: string,
+  fields: string[] = []
+) {
   const realSlug = slug.replace(/\.md$/, "");
   const postsDirectory = join(process.cwd(), CONTENT_ROOT, sectionType);
   const fullPath = join(postsDirectory, `${realSlug}.md`);
@@ -18,8 +24,8 @@ export function getPostBySlug(slug: string, sectionType: string, fields: string[
   const { data, content } = matter(fileContents);
 
   type Items = {
-    [key: string]: string
-  }
+    [key: string]: string;
+  };
 
   const items: Items = {};
 
@@ -42,7 +48,7 @@ export function getPostBySlug(slug: string, sectionType: string, fields: string[
   return items;
 }
 
-export function getAllPosts(sectionType:string, fields: string[] = []) {
+export function getAllPosts(sectionType: string, fields: string[] = []) {
   const slugs = getPostSlugs(sectionType);
   const posts = slugs
     .map((slug) => getPostBySlug(slug, sectionType, fields))

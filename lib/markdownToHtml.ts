@@ -1,13 +1,19 @@
-import unified from "unified";
-import parse from "remark-parse";
-import remark2rehype from "remark-rehype";
-import katex from "rehype-katex";
-import rehypePrism from "@mapbox/rehype-prism";
-import stringify from "rehype-stringify";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeKatex from "rehype-katex";
+import rehypeStringify from "rehype-stringify";
 import math from "remark-math";
 
 export default async function markdownToHtml(markdown: string) {
-  const result = await unified().use(parse).use(math).use(remark2rehype).use(rehypePrism).use(katex).use(stringify).process(markdown);
+  const result = await unified()
+    .use(remarkParse)
+    .use(math)
+    .use(remarkRehype)
+    // @ts-expect-error (until remark is upgraded)
+    .use(rehypeKatex)
+    .use(rehypeStringify)
+    .process(markdown);
 
-  return result.contents;
+  return result.value;
 }
