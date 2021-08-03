@@ -26,7 +26,7 @@ const HeroCard = ({
   slug,
   section,
   hashtags,
-}: Props) => (
+}: Props): JSX.Element => (
   <div className="mb-8 md:mb-16 xl:mb-24 lg:flex rounded overflow-hidden shadow-lg border border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light rounded-b lg:rounded-b-none lg:rounded-r">
     {coverImage && (
       <div className="max-w-xl">

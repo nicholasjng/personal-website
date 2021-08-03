@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import PostBody from "../components/post-body";
 import PostHeader from "../components/post-header";
@@ -33,7 +33,10 @@ export default function PostPage({ post, morePosts, preview }: Props) {
               <title>{post.title} - Nicholas Junge</title>
               <meta name="description" content={post.description} />
               <meta name="author" content={post.author.name} />
-              <meta name="robots" content="index, follow, max-image-preview:standard" />
+              <meta
+                name="robots"
+                content="index, follow, max-image-preview:standard"
+              />
               {/* OG Properties */}
               <meta property="og:locale" content="en_US" />
               <meta property="og:title" content={post.title} />

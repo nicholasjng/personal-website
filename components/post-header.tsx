@@ -11,7 +11,12 @@ type Props = {
   author: Author;
 };
 
-const PostHeader = ({ title, coverImage, date, author }: Props) => (
+const PostHeader = ({
+  title,
+  coverImage,
+  date,
+  author,
+}: Props): JSX.Element => (
   <>
     <PostTitle>{title}</PostTitle>
     {coverImage && (

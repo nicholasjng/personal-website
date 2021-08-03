@@ -11,10 +11,10 @@ import {
   TwitterIcon,
 } from "react-share";
 
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { BASE_URL } from "../lib/constants";
 
-export default function SocialFooter() {
+export default function SocialFooter(): JSX.Element {
   const router = useRouter();
   const location = router.asPath;
 

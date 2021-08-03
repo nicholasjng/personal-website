@@ -4,7 +4,7 @@ type Props = {
   content: string;
 };
 
-const PostBody = ({ content }: Props) => (
+const PostBody = ({ content }: Props): JSX.Element => (
   <div className="max-w-2xl mx-auto">
     <div
       className="prose prose-blue lg:prose-xl"

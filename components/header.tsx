@@ -35,7 +35,7 @@ const HeaderLink = ({ isActive, title, to, spanColor }: LinkProps) => (
   </Link>
 );
 
-const Header = ({ location }: Props) => (
+const Header = ({ location }: Props): JSX.Element => (
   <header className="sticky top-0 z-10 mb-5 bg-white border-b-2 border-black whitespace-nowrap py-4 overflow-x-scroll xl:overflow-x-auto">
     <h1 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter inline-block ml-5 md:ml-10 mr-5 md:mr-0">
       <Link href="/">

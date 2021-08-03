@@ -1,4 +1,8 @@
-const HashtagList = ({ hashtags }) => (
+type Props = {
+  hashtags: string;
+};
+
+const HashtagList = ({ hashtags }: Props): JSX.Element => (
   <div className="px-6 py-2">
     {hashtags.split(",").map((ht: string) => (
       <span

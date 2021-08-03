@@ -3,7 +3,7 @@ import SocialFooter from "./social-footer";
 import navFooter from "../config/footerNav.yml";
 import CustomLink from "./custom-link";
 
-const GITHUB_REPO = "https://github.com/njunge94/personal-website";
+const GITHUB_REPO = "https://github.com/nicholasjng/personal-website";
 
 type Props = {
   children: ReactNode;
@@ -33,7 +33,7 @@ const FooterNav = ({ children }: Props) => (
   </nav>
 );
 
-const Footer = () => (
+const Footer = (): JSX.Element => (
   <footer className="border-t bg-accent-1 border-accent-2 py-16">
     <section className="container mx-auto sm:w-full xl:w-2/3 px-10 lg:px-20 flex sm:flex-col lg:flex-row flex-wrap justify-between mb-16">
       <SocialFooter />
@@ -56,7 +56,7 @@ const Footer = () => (
         className="ml-2 underline text-success"
         href={GITHUB_REPO}
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         This website is open source!
       </a>

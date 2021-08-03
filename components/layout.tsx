@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 import Header from "./header";
 import Footer from "./footer";
@@ -10,7 +10,7 @@ type Props = {
   children: ReactNode;
 };
 
-export default function Layout({ preview, children }: Props) {
+export default function Layout({ preview, children }: Props): JSX.Element {
   const router = useRouter();
   const location = router.pathname;
   return (

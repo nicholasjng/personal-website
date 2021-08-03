@@ -33,7 +33,10 @@ export default function IndexPage({ idxItem, allPosts }: Props) {
         <title>{metaTitle}</title>
         <meta name="author" content={MAIN_AUTHOR} />
         <meta name="description" content={idxItem.desc} />
-        <meta name="robots" content="index, follow, max-image-preview:standard" />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:standard"
+        />
         {/* OG properties  */}
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={metaTitle} />

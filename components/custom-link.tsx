@@ -8,7 +8,7 @@ type LinkProps = {
   rel?: string;
 };
 
-const CustomLink = ({ children, href, target, rel }: LinkProps) =>
+const CustomLink = ({ children, href, target, rel }: LinkProps): JSX.Element =>
   href.startsWith("/") || href === "" ? (
     <Link href={href}>
       <a

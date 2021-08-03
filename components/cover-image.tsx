@@ -10,7 +10,12 @@ type Props = {
   width: number;
 };
 
-export default function CoverImage({ title, src, slug, width }: Props) {
+export default function CoverImage({
+  title,
+  src,
+  slug,
+  width,
+}: Props): JSX.Element {
   const [filename, extension] = src.split(".");
 
   const srcSet = imageResizeTargets

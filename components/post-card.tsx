@@ -26,7 +26,7 @@ const PostCard = ({
   slug,
   section,
   hashtags,
-}: Props) => (
+}: Props): JSX.Element => (
   <div className="rounded overflow-hidden shadow-lg">
     {coverImage && (
       <CoverImage slug={slug} title={title} src={coverImage} width={500} />
