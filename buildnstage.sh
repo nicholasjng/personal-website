@@ -27,7 +27,9 @@ python3 generate_sitemap.py
 
 # remove .next folder (see https://github.com/vercel/next.js/discussions/6009)
 npm run clean
-
+# linting script, uses next builtin lint
+npm run lint
+# build script
 npm run build
 
 # at this point, we have an out directory as follows

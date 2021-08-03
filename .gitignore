@@ -24,8 +24,10 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# rc files & configs
-.stylelintrc
+!/.vscode
 
 # generated images
 *.webp
+
+# google search ownership tag
+google*.html
