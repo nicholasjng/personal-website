@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // MIT License
 
 // Copyright (c) 2021 Timothy Lin
@@ -20,18 +21,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-// credit GitHub user `timlrx` for the tailwind typography config
-
+const defaultTheme = require("tailwindcss/defaultTheme");
 const { nordColors } = require("./nordcolors");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: {
-    content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
-    options: {
-      safelist: {
-        deep: [/nord-1[1-5]/],
-      },
-    },
+  content: [
+    "./components/**/*.tsx",
+    "./pages/**/*.tsx",
+    "./layouts/**/*.tsx",
+    "./lib/**/*.ts",
+    "./nordcolors.js",
+  ],
+  safelist: {
+    pattern: /(bg|text)-nord-1[1-5]/,
+    variants: ["hover"],
   },
   theme: {
     extend: {
@@ -39,41 +43,36 @@ module.exports = {
         nord: {
           ...nordColors,
         },
-        "accent-1": "#FAFAFA",
-        "accent-2": "#EAEAEA",
-        "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+        primary: colors.teal,
+        gray: colors.neutral,
+      },
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       spacing: {
-        28: "7rem",
+        "9/16": "56.25%",
       },
       letterSpacing: {
         tighter: "-.04em",
       },
       lineHeight: {
-        tight: 1.2,
-      },
-      fontSize: {
-        "5xl": "2.5rem",
-        "6xl": "2.75rem",
-        "7xl": "4.5rem",
-        "8xl": "6.25rem",
-      },
-      boxShadow: {
-        small: "0 5px 10px rgba(0, 0, 0, 0.12)",
-        medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
+        11: "2.75rem",
+        12: "3rem",
+        13: "3.25rem",
+        14: "3.5rem",
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             color: theme("colors.gray.700"),
             a: {
-              color: theme("colors.blue.500"),
+              color: theme("colors.primary.500"),
               "&:hover": {
-                color: theme("colors.blue.600"),
+                color: theme("colors.primary.600"),
               },
-              code: { color: theme("colors.blue.400") },
+              code: { color: theme("colors.primary.400") },
             },
             h1: {
               fontWeight: "700",
@@ -106,6 +105,14 @@ module.exports = {
             },
             "code:after": {
               content: "none",
+            },
+            details: {
+              backgroundColor: theme("colors.gray.100"),
+              paddingLeft: "4px",
+              paddingRight: "4px",
+              paddingTop: "2px",
+              paddingBottom: "2px",
+              borderRadius: "0.25rem",
             },
             hr: { borderColor: theme("colors.gray.200") },
             "ol li:before": {

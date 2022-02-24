@@ -1,13 +1,9 @@
 ---
 title: 'The Leica Noctilux-M 75mm f/1.25: Fun at a cost'
-description: "My review of the Leica Noctilux 75mm for the M. I have had it in use for about a year, this article holds my personal opinion on the lens in terms of build quality, look, feel and more."
-date: '2021-05-09T17:58:54Z'
-coverImage: '/assets/photography/noct75-review/cover.jpg'
-ogImage: 'assets/og/noct75-review.jpg'
-author:
-  name: Nicholas Junge
-  picture: '/assets/blog/authors/nicholas.jpg'
-hashtags: "leica,noctilux75mm,portraitphotography,leicamsystem,rangefinder"
+date: 2021-05-09
+summary: My review of the Leica Noctilux 75mm for the M. I have had it in use for about a year, this article holds my personal opinion on the lens in terms of build quality, look, feel and more.
+image: /assets/og/noct75-review.jpg
+topics: [Leica, Noctilux 75mm, portrait photography, rangefinder]
 ---
 
 *This post is a work in progress; more images and thoughts may be added as time goes on.*

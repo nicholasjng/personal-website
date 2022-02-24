@@ -7,15 +7,11 @@ items:
     to: /photography
     activeSelector: /photography
     spanColor: 12
-  - title: Mathematics 
-    to: /math
-    activeSelector: /math
+  - title: Topics
+    to: /topics
+    activeSelector: /topics
     spanColor: 13
-  - title: Programming
-    to: /programming
-    activeSelector: /programming
-    spanColor: 14
-  - title: About me
+  - title: About
     to: /about
     activeSelector: /about
-    spanColor: 15
+    spanColor: 14

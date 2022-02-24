@@ -23,6 +23,7 @@ rules: {
   "react/jsx-filename-extension": [1, { "extensions": [".tsx", .ts"] }], 
   "quotes": ["error", "double"],
   "react/jsx-one-expression-by-line": "off",
+  "max-len": ["error", { "code": 120 }]
 }
 settings:
   react:

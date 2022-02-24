@@ -1,4 +1,4 @@
-import PostType from "./post";
+import PostType from "./frontMatter";
 
 type PostPageType = {
   post: PostType;

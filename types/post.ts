@@ -1,16 +1,16 @@
-import Author from "./author";
-
+// Slug-augmented front matter as returned by getStaticProps.
 type PostType = {
-  slug: string;
-  section: string;
   title: string;
+  slug: string;
+  fileName: string;
   date: string;
-  coverImage?: string;
-  ogImage?: string;
-  author: Author;
-  description: string;
-  content: string;
-  hashtags?: string;
+  lastmod?: string;
+  authors?: string[];
+  summary?: string;
+  image?: string;
+  topics?: string[];
+  layout?: string;
+  draft?: boolean;
 };
 
 export default PostType;

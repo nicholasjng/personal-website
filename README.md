@@ -1,6 +1,4 @@
-This is the code for my personal website built with React and Next.js. It is hosted on AWS using a combination of S3 + CloudFront. 
-
-You can create your own next.js website by cloning this repo and get started right there!
+This is the code for my personal website built with React and Next.js. The code is a modified version of the next.js + Tailwind CSS starter blog template by Timothy Lin, which can be found [here](https://github.com/timlrx/tailwind-nextjs-starter-blog). Credit has been given for the used parts by adding the project's license as a header to the source files of this repo.
 
 For versioned deployments using S3, the workflow is as follows:
 
@@ -48,13 +46,4 @@ You can programmatically generate the sitemap by executing the `generate_sitemap
 ```
 python generate_sitemap.py
 ```
-
-## Acknowledgements
-The tailwind typography configuration in `tailwind.config.js` is sourced from `timlrx`'s [next.js + Tailwind CSS starter blog template](https://github.com/timlrx/tailwind-nextjs-starter-blog). The appropriate license has been added in the file itself.
-
-## Awesome next.js website building resources for inspiration
-* [next.js + Tailwind CSS starter blog by timlrx](https://github.com/timlrx/tailwind-nextjs-starter-blog)
-* [leerob.io repository](https://github.com/leerob/leerob.io)
-* [next.js](https://nextjs.org/)
-* [reactjs.org repository](https://github.com/reactjs/reactjs.org)
 
