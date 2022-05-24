@@ -36,7 +36,7 @@ export default function Home({ frontMatters }: Props) {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!frontMatters.length && "No posts found."}
           {frontMatters.slice(0, MAX_POSTS).map((frontMatter) => {
-            const { slug, date, title, summary, topics } = frontMatter;
+            const { slug, date, title, summary, tags } = frontMatter;
             return (
               <Preview
                 key={slug}
@@ -44,7 +44,7 @@ export default function Home({ frontMatters }: Props) {
                 date={date}
                 title={title}
                 summary={summary}
-                topics={topics}
+                tags={tags}
               />
             );
           })}

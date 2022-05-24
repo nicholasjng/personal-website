@@ -22,9 +22,9 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/config/*": ["config/*"],
+      "@/css/*": ["css/*"],
       "@/layouts/*": ["layouts/*"],
       "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"],
       "@/types/*": ["types/*"]
     }
   },

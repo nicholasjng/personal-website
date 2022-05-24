@@ -28,28 +28,28 @@ import kebabCase from "./kebabCase";
 
 const root = process.cwd();
 
-export async function getAllTopics(type: string) {
+export async function getAllTags(type: string) {
   const files = await getFiles(type);
 
-  const topicCount = {};
-  // Iterate through each post, putting all found topics into `topics`
+  const tagCount = {};
+  // Iterate through each post, putting all found tags into `tags`
   files.forEach((file: string) => {
     const source = fs.readFileSync(
       path.join(root, "content", type, file),
       "utf8"
     );
     const { data } = matter(source);
-    if (data.topics && data.draft !== true) {
-      data.topics.forEach((topic: string) => {
-        const formattedTopic = kebabCase(topic);
-        if (formattedTopic in topicCount) {
-          topicCount[formattedTopic] += 1;
+    if (data.tags && data.draft !== true) {
+      data.tags.forEach((tag: string) => {
+        const formattedTag = kebabCase(tag);
+        if (formattedTag in tagCount) {
+          tagCount[formattedTag] += 1;
         } else {
-          topicCount[formattedTopic] = 1;
+          tagCount[formattedTag] = 1;
         }
       });
     }
   });
 
-  return topicCount;
+  return tagCount;
 }

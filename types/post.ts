@@ -8,7 +8,7 @@ type PostType = {
   authors?: string[];
   summary?: string;
   image?: string;
-  topics?: string[];
+  tags?: string[];
   layout?: string;
   draft?: boolean;
 };

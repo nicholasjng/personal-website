@@ -56,7 +56,7 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
           </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center pt-8 space-x-2">
+          <div className="flex flex-col items-center pt-8">
             <Image
               src={avatar}
               alt="avatar"

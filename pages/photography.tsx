@@ -32,7 +32,7 @@ export default function Home({ frontMatters }: Props) {
         <ul className="flex flex-wrap">
           {!frontMatters.length && "No posts found."}
           {frontMatters.slice(0, MAX_POSTS).map((frontMatter) => {
-            const { slug, date, image, title, summary, topics } = frontMatter;
+            const { slug, date, image, title, summary, tags } = frontMatter;
             return (
               <Card
                 key={slug}
@@ -42,7 +42,7 @@ export default function Home({ frontMatters }: Props) {
                 image={image}
                 section="photography"
                 summary={summary}
-                topics={topics}
+                tags={tags}
               />
             );
           })}

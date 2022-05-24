@@ -56,11 +56,11 @@ export function getFiles(type: string) {
 }
 
 export function getPostSlugs(sectionType: string) {
-  const md_ext = ".mdx";
+  const mdExt = ".mdx";
   const postsDirectory = join(process.cwd(), CONTENT_ROOT, sectionType);
   return fs
     .readdirSync(postsDirectory)
-    .filter((file) => extname(file).toLowerCase() === md_ext);
+    .filter((file) => extname(file).toLowerCase() === mdExt);
 }
 
 export async function getFileBySlug(sectionType: string, slug: string) {
@@ -72,11 +72,29 @@ export async function getFileBySlug(sectionType: string, slug: string) {
     ? fs.readFileSync(mdxPath, "utf8")
     : fs.readFileSync(mdPath, "utf8");
 
-  const { code } = await bundleMDX({
+  // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
+  if (process.platform === "win32") {
+    process.env.ESBUILD_BINARY_PATH = join(
+      cwd,
+      "node_modules",
+      "esbuild",
+      "esbuild.exe"
+    );
+  } else {
+    process.env.ESBUILD_BINARY_PATH = join(
+      cwd,
+      "node_modules",
+      "esbuild",
+      "bin",
+      "esbuild"
+    );
+  }
+
+  const { code, frontmatter } = await bundleMDX({
     source: source,
     // mdx imports can be automatically sourced from the components directory
     cwd: join(cwd, "components"),
-    xdmOptions(options) {
+    mdxOptions(options, frontmatter) {
       // this is the recommended way to add custom remark/rehype plugins
       (options.remarkPlugins = [
         ...(options.remarkPlugins ?? []),
@@ -100,8 +118,6 @@ export async function getFileBySlug(sectionType: string, slug: string) {
       return options;
     },
   });
-
-  const { data: frontmatter } = matter(source);
 
   return {
     mdxSource: code,

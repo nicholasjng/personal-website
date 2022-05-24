@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CoverImage from "@/components/Image";
-import Topic from "@/components/Topic";
+import Tag from "@/components/Tag";
 import formatDate from "@/lib/formatDate";
 
 type Props = {
@@ -10,18 +10,10 @@ type Props = {
   summary: string;
   slug: string;
   section: string;
-  topics?: string[];
+  tags?: string[];
 };
 
-const Card = ({
-  title,
-  image,
-  date,
-  summary,
-  slug,
-  section,
-  topics,
-}: Props) => (
+const Card = ({ title, image, date, summary, slug, section, tags }: Props) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: "544px" }}>
     <div className="h-full overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700">
       {image && (
@@ -46,7 +38,7 @@ const Card = ({
             <time dateTime={date}>{formatDate(date)}</time>
           </dd>
         </div>
-        {topics && topics.map((topic) => <Topic key={topic} text={topic} />)}
+        {tags && tags.map((tag) => <Tag key={tag} text={tag} />)}
       </div>
     </div>
   </div>

@@ -22,29 +22,27 @@
 
 import Link from "@/components/CustomLink";
 import { PageSEO } from "@/components/SEO";
-import Topic from "@/components/Topic";
+import Tag from "@/components/Tag";
 import metadata from "@/config/metadata.yml";
-import { getAllTopics } from "@/lib/topics";
+import { getAllTags } from "@/lib/tags";
 import kebabCase from "@/lib/kebabCase";
 
 type Props = {
-  topics: string[];
+  tags: string[];
 };
 
 export async function getStaticProps() {
-  const topics = await getAllTopics("blog");
+  const tags = await getAllTags("blog");
 
-  return { props: { topics } };
+  return { props: { tags } };
 }
 
-export default function Topics({ topics }: Props) {
-  const sortedTopics = Object.keys(topics).sort(
-    (a, b) => topics[b] - topics[a]
-  );
+export default function Tags({ tags }: Props) {
+  const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a]);
   return (
     <>
       <PageSEO
-        title={`Topics - ${metadata.mainAuthor}`}
+        title={`Tags - ${metadata.mainAuthor}`}
         description="Things I blog about"
       />
       <div
@@ -56,20 +54,20 @@ export default function Topics({ topics }: Props) {
             className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 
           sm:text-4xl sm:leading-10 md:border-r-2 md:px-6 md:text-6xl md:leading-14"
           >
-            Topics
+            Tags
           </h1>
         </div>
         <div className="flex max-w-lg flex-wrap">
-          {Object.keys(topics).length === 0 && "No topics found."}
-          {sortedTopics.map((t) => {
+          {Object.keys(tags).length === 0 && "No tags found."}
+          {sortedTags.map((t) => {
             return (
               <div key={t} className="mt-2 mb-2 mr-5">
-                <Topic text={t} />
+                <Tag text={t} />
                 <Link
-                  href={`/topics/${kebabCase(t)}`}
+                  href={`/tags/${kebabCase(t)}`}
                   className="-ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
                 >
-                  {` (${topics[t]})`}
+                  {` (${tags[t]})`}
                 </Link>
               </div>
             );

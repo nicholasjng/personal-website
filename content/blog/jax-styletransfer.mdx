@@ -3,10 +3,10 @@ title: Neural style transfer in the JAX ecosystem
 date: 2021-05-08
 summary: A small hobby project about style transfer in JAX using neural networks that I have been working on for a couple of weeks.
 authors: [default]
-topics: [python, jax, haiku, deep-learning, gpu-computing, style-transfer]
+tags: [python, jax, haiku, deep-learning, gpu-computing, style-transfer]
 ---
 
-*This post is a work in progress, just like the project itself! You can find the source code on [GitHub](https://github.com/njunge94/jax-styletransfer).*
+*This post is a work in progress, just like the project itself! You can find the source code on [GitHub](https://github.com/nicholasjng/jax-styletransfer).*
 
 So I decided to finally give JAX a go. I had discovered the project earlier in 2020, but never gotten around to using it. Usually, when I try to use a new computing / ML framework, my "Hello World" project is **neural style transfer**. So how did it go?
 
@@ -74,6 +74,7 @@ $$
 which has two special member functions called *init* and *apply*. These are used for your network's initialization and forward pass, respectively, and return the network's trainable parameters as a special kind of `dict`.
 
 Another clever thing from Haiku: If you maintain any additional state outside of trainable network parameters, such as layer variables (think $\mu$s and $\sigma$s from BatchNorm), a `hk.transform_with_state`'d $f$ will have the signature
+
 ```
 f: (params, state, *, **) -> Tuple(new_params, new_state) ,
 ```

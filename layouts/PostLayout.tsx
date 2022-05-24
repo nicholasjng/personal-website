@@ -22,7 +22,7 @@
 
 import SectionContainer from "@/components/SectionContainer";
 import { BlogSEO } from "@/components/SEO";
-import Topic from "@/components/Topic";
+import Tag from "@/components/Tag";
 import siteMetadata from "@/config/metadata.yml";
 import CustomLink from "@/components/CustomLink";
 import PageTitle from "@/components/PageTitle";
@@ -53,7 +53,7 @@ export default function PostLayout({
   prev,
   children,
 }: Props) {
-  const { slug, date, title, topics } = frontMatter;
+  const { slug, date, title, tags } = frontMatter;
 
   return (
     <SectionContainer>
@@ -137,7 +137,7 @@ export default function PostLayout({
                 className="text-sm font-medium leading-5 divide-gray-200 
               xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2"
               >
-                {topics && (
+                {tags && (
                   <div className="py-4 xl:py-8">
                     <h2
                       className="text-xs tracking-wide text-gray-500 uppercase 
@@ -146,8 +146,8 @@ export default function PostLayout({
                       Tags
                     </h2>
                     <div className="flex flex-wrap">
-                      {topics.map((topic) => (
-                        <Topic key={topic} text={topic} />
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
                       ))}
                     </div>
                   </div>

@@ -22,17 +22,17 @@
 
 import CustomLink from "@/components/CustomLink";
 import formatDate from "@/lib/formatDate";
-import Topic from "@/components/Topic";
+import Tag from "@/components/Tag";
 
 type Props = {
   slug: string;
   date: string;
   title: string;
   summary: string;
-  topics: string[];
+  tags: string[];
 };
 
-export default function Preview({ slug, date, title, summary, topics }: Props) {
+export default function Preview({ slug, date, title, summary, tags }: Props) {
   return (
     <li key={slug} className="py-12">
       <article>
@@ -57,8 +57,8 @@ export default function Preview({ slug, date, title, summary, topics }: Props) {
                     {title}
                   </CustomLink>
                 </h2>
-                {topics.map((topic) => (
-                  <Topic key={topic} text={topic} />
+                {tags.map((tag) => (
+                  <Tag key={tag} text={tag} />
                 ))}
               </div>
               <div className="prose text-gray-500 max-w-none dark:text-gray-400">

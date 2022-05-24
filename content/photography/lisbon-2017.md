@@ -3,7 +3,7 @@ title: 'Portugal 2017: First touch'
 date: '2021-04-11'
 summary: Impressions of my first trip to Portugal. A really groundbreaking journey.
 image: /assets/og/lisbon-2017.jpg
-topics: [portugal]
+tags: [portugal]
 ---
 
 So I have always been a big fan of Scandinavia in general. I went to Bergen, Norway to study via the Erasmus program, 

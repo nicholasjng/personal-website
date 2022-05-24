@@ -7,9 +7,9 @@ items:
     to: /photography
     activeSelector: /photography
     spanColor: 12
-  - title: Topics
-    to: /topics
-    activeSelector: /topics
+  - title: Tags
+    to: /tags
+    activeSelector: /tags
     spanColor: 13
   - title: About
     to: /about

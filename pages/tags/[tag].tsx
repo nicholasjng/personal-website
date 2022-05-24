@@ -2,17 +2,17 @@ import { PageSEO } from "@/components/SEO";
 import metadata from "@/config/metadata.yml";
 import ListLayout from "@/layouts/ListLayout";
 import { getAllFilesFrontMatter } from "@/lib/mdx";
-import { getAllTopics } from "@/lib/topics";
+import { getAllTags } from "@/lib/tags";
 import kebabCase from "@/lib/kebabCase";
 import PostType from "@/types/post";
 
 export async function getStaticPaths() {
-  const topics = await getAllTopics("blog");
+  const tags = await getAllTags("blog");
 
   return {
-    paths: Object.keys(topics).map((topic) => ({
+    paths: Object.keys(tags).map((tag) => ({
       params: {
-        topic,
+        tag,
       },
     })),
     fallback: false,
@@ -24,25 +24,25 @@ export async function getStaticProps({ params }) {
   const filteredPosts = allPosts.filter(
     (post) =>
       post.draft !== true &&
-      post.topics.map((t: string) => kebabCase(t)).includes(params.topic)
+      post.tags.map((t: string) => kebabCase(t)).includes(params.tag)
   );
 
-  return { props: { posts: filteredPosts, topic: params.topic } };
+  return { props: { posts: filteredPosts, tag: params.tag } };
 }
 
 type Props = {
   posts: PostType[];
-  topic: string;
+  tag: string;
 };
 
-export default function Topic({ posts, topic }: Props) {
+export default function Tag({ posts, tag }: Props) {
   // Capitalize first letter and convert space to dash
-  const title = topic[0].toUpperCase() + topic.split(" ").join("-").slice(1);
+  const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1);
   return (
     <>
       <PageSEO
-        title={`${topic} - ${metadata.mainAuthor}`}
-        description={`${topic} topics - ${metadata.mainAuthor}`}
+        title={`${tag} - ${metadata.mainAuthor}`}
+        description={`${tag} tags - ${metadata.mainAuthor}`}
       />
       <ListLayout posts={posts} title={title} />
     </>

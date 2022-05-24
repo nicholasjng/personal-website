@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 
-import "@/styles/index.css";
+import "@/css/tailwind.css";
+import "@/css/prism.css";
 import "katex/dist/katex.css";
 
 import Head from "next/head";
