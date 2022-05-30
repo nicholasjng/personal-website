@@ -1,58 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url>
-		<loc>https://www.nicholasjunge.com</loc>
-	</url>
+  <url>
+    <loc>https://www.nicholasjunge.com/about</loc>
+  </url>
 
-	<url>
-		<loc>https://www.nicholasjunge.com/photography</loc>
-	</url>
+  <url>
+    <loc>https://www.nicholasjunge.com/blog</loc>
+  </url>
 
-	<url>
-		<loc>https://www.nicholasjunge.com/about</loc>
-	</url>
+  <url>
+    <loc>https://www.nicholasjunge.com</loc>
+  </url>
 
-	<url>
-		<loc>https://www.nicholasjunge.com/math</loc>
-	</url>
+  <url>
+    <loc>https://www.nicholasjunge.com/photography</loc>
+  </url>
 
-	<url>
-		<loc>https://www.nicholasjunge.com/blog</loc>
-	</url>
+  <url>
+    <loc>https://www.nicholasjunge.com/tags</loc>
+  </url>
 
-	<url>
-		<loc>https://www.nicholasjunge.com/programming</loc>
-	</url>
+  <url>
+    <loc>https://www.nicholasjunge.comcontent/blog/jax-styletransfer</loc>
+  </url>
 
-	<url>
-		<loc>https://www.nicholasjunge.com/photography/noct75-review</loc>
-	</url>
+  <url>
+    <loc>https://www.nicholasjunge.comcontent/blog/ode-explorer</loc>
+  </url>
 
-	<url>
-		<loc>https://www.nicholasjunge.com/photography/lisbon-2017</loc>
-	</url>
-
-	<url>
-		<loc>https://www.nicholasjunge.com/photography/oslo-2019</loc>
-	</url>
-
-	<url>
-		<loc>https://www.nicholasjunge.com/math/regularity</loc>
-	</url>
-
-	<url>
-		<loc>https://www.nicholasjunge.com/blog/hello-world</loc>
-	</url>
-
-	<url>
-		<loc>https://www.nicholasjunge.com/programming/ode-explorer</loc>
-	</url>
-
-	<url>
-		<loc>https://www.nicholasjunge.com/programming/jax-styletransfer</loc>
-	</url>
-
-	<url>
-		<loc>https://www.nicholasjunge.com/programming/first-open-source</loc>
-	</url>
+  <url>
+    <loc>https://www.nicholasjunge.comcontent/blog/regularity</loc>
+  </url>
 </urlset>

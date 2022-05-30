@@ -126,6 +126,7 @@ export async function getFileBySlug(sectionType: string, slug: string) {
       fileName: fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`,
       ...frontmatter,
       date: frontmatter.date ? new Date(frontmatter.date).toISOString() : null,
+      authors: frontmatter.authors || ["default"],
     },
   };
 }

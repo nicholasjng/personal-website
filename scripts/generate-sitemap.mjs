@@ -20,17 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const fs = require("fs");
-const globby = require("globby");
-const matter = require("gray-matter");
-const prettier = require("prettier");
-const siteMetadata = require("../data/siteMetadata")(async () => {
+import fs from "fs";
+import { globby } from "globby";
+import matter from "gray-matter";
+import prettier from "prettier";
+
+const siteUrl = "https://www.nicholasjunge.com";
+
+(async () => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
   const pages = await globby([
-    "pages/*.js",
     "pages/*.tsx",
-    "data/blog/**/*.mdx",
-    "data/blog/**/*.md",
+    "content/blog/**/*.mdx",
+    "content/blog/**/*.md",
     "public/tags/**/*.xml",
     "!pages/_*.js",
     "!pages/_*.tsx",
@@ -71,7 +73,7 @@ const siteMetadata = require("../data/siteMetadata")(async () => {
                 }
                 return `
                         <url>
-                            <loc>${siteMetadata.siteUrl}${route}</loc>
+                            <loc>${siteUrl}${route}</loc>
                         </url>
                     `;
               })

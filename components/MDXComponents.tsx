@@ -26,10 +26,21 @@ import { getMDXComponent } from "mdx-bundler/client";
 import CustomLink from "@/components/CustomLink";
 import Pre from "@/components/Pre";
 import Image from "@/components/Image";
+import FrontMatterType from "@/types/frontMatter";
+
+type Post = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  mdxSource: any;
+  frontMatter: FrontMatterType;
+};
 
 type Props = {
   layout: string;
   mdxSource: string;
+  frontMatter: FrontMatterType;
+  authorDetails: string[];
+  prev: Post;
+  next: Post;
 };
 
 export const MDXComponents = {

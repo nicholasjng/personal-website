@@ -24,6 +24,9 @@ export default function About({ authorDetails }: Props) {
       layout={frontMatter.layout || DEFAULT_LAYOUT}
       mdxSource={mdxSource}
       frontMatter={frontMatter}
+      authorDetails={frontMatter.authors}
+      prev={null}
+      next={null}
     />
   );
 }

@@ -17,13 +17,7 @@ const Card = ({ title, image, date, summary, slug, section, tags }: Props) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: "544px" }}>
     <div className="h-full overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700">
       {image && (
-        <CoverImage
-          slug={slug}
-          title={title}
-          src={image}
-          width={500}
-          height={250}
-        />
+        <CoverImage title={title} src={image} width={500} height={250} />
       )}
       <div className="px-6 py-4">
         <h3 className="font-bold text-xl mb-2">

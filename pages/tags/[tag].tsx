@@ -44,7 +44,7 @@ export default function Tag({ posts, tag }: Props) {
         title={`${tag} - ${metadata.mainAuthor}`}
         description={`${tag} tags - ${metadata.mainAuthor}`}
       />
-      <ListLayout posts={posts} title={title} />
+      <ListLayout posts={posts} title={title} initialDisplayPosts={[]} />
     </>
   );
 }

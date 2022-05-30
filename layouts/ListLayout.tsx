@@ -32,7 +32,7 @@ type Props = {
   posts: PostType[];
   title: string;
   initialDisplayPosts: PostType[];
-  pagination: PaginationType;
+  pagination?: PaginationType;
 };
 
 export default function ListLayout({

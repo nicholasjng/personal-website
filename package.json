@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
-    "build": "next build && node ./scripts/generate-sitemap",
+    "build": "next build && node ./scripts/generate-sitemap.mjs",
     "start": "next start",
     "clean": "npx rimraf .next out",
     "lint": "next lint"
